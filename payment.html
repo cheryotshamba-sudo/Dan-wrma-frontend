@@ -25,7 +25,6 @@
     --light-green:#edf7f1;
     --text:#34443c;
     --border:#ccd9d2;
-    --white:#ffffff;
 }
 
 body{
@@ -68,7 +67,7 @@ header{
     height:45px;
     border-radius:50%;
     background:var(--green);
-    color:white;
+    color:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -139,7 +138,7 @@ header{
 }
 
 
-/* ================= CARD ================= */
+/* ================= PAYMENT CARD ================= */
 
 .payment-card{
     width:min(550px,100%);
@@ -191,7 +190,7 @@ header{
 }
 
 
-/* ================= AMOUNTS ================= */
+/* ================= AMOUNT BUTTONS ================= */
 
 .amount-grid{
     display:grid;
@@ -201,7 +200,7 @@ header{
 }
 
 .amount-btn{
-    height:49px;
+    height:50px;
     border:2px solid #cfddd5;
     background:var(--light-green);
     color:var(--dark-green);
@@ -215,16 +214,17 @@ header{
 
 .amount-btn:hover{
     border-color:var(--green);
+    transform:translateY(-1px);
 }
 
 .amount-btn.active{
     background:var(--green);
-    color:white;
+    color:#fff;
     border-color:var(--green);
 }
 
 
-/* ================= CURRENCY ================= */
+/* ================= CUSTOM AMOUNT ================= */
 
 .currency-input{
     position:relative;
@@ -246,7 +246,7 @@ header{
 }
 
 
-/* ================= INFO ================= */
+/* ================= PAYMENT INFO ================= */
 
 .payment-info{
     background:var(--light-green);
@@ -265,7 +265,7 @@ header{
 }
 
 
-/* ================= BUTTON ================= */
+/* ================= DONATE BUTTON ================= */
 
 .pay-button{
     width:100%;
@@ -273,7 +273,7 @@ header{
     border:none;
     border-radius:6px;
     background:var(--green);
-    color:white;
+    color:#fff;
     font-family:"DM Sans",Arial,sans-serif;
     font-size:16px;
     font-weight:900;
@@ -304,7 +304,7 @@ header{
     width:20px;
     height:20px;
     border:3px solid rgba(255,255,255,.35);
-    border-top-color:white;
+    border-top-color:#fff;
     border-radius:50%;
     animation:spin .8s linear infinite;
     display:none;
@@ -317,7 +317,7 @@ header{
 }
 
 
-/* ================= ERROR ================= */
+/* ================= MESSAGE ================= */
 
 .message{
     display:none;
@@ -441,7 +441,7 @@ header{
     padding:0 25px;
     border-radius:6px;
     background:var(--green);
-    color:white;
+    color:#fff;
     text-decoration:none;
     font-size:14px;
     font-weight:900;
@@ -452,7 +452,7 @@ header{
 
 footer{
     background:var(--dark-green);
-    color:white;
+    color:#fff;
     text-align:center;
     padding:28px 15px;
 }
@@ -506,11 +506,13 @@ footer p{
     }
 
     .amount-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;
     }
 
     .amount-btn{
-        font-size:14px;
+        height:48px;
+        font-size:13px;
     }
 
     .pay-button{
@@ -527,6 +529,8 @@ footer p{
 <body>
 
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <div class="container nav">
@@ -538,11 +542,17 @@ footer p{
         </div>
 
         <div class="logo-text">
+
             <strong>WEMA</strong>
-            <span>CHARITY FOUNDATION</span>
+
+            <span>
+                CHARITY FOUNDATION
+            </span>
+
         </div>
 
     </a>
+
 
     <a href="index.html" class="back-link">
         ← Back
@@ -554,9 +564,12 @@ footer p{
 
 
 
+<!-- ================= DONATION SECTION ================= -->
+
 <section class="payment-section">
 
 <div class="container">
+
 
     <div class="payment-header">
 
@@ -577,13 +590,16 @@ footer p{
     </div>
 
 
+
     <div class="payment-card">
 
 
-        <!-- DONATION FORM -->
+        <!-- ================= DONATION FORM ================= -->
 
         <div id="donationForm">
 
+
+            <!-- NAME -->
 
             <div class="form-group">
 
@@ -601,6 +617,8 @@ footer p{
 
 
 
+            <!-- AMOUNT -->
+
             <div class="form-group">
 
                 <label>
@@ -610,12 +628,30 @@ footer p{
 
                 <div class="amount-grid">
 
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="100">
+                        KSh 100
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="200">
+                        KSh 200
+                    </button>
+
+
                     <button
                         type="button"
                         class="amount-btn"
                         data-amount="500">
                         KSh 500
                     </button>
+
 
                     <button
                         type="button"
@@ -624,12 +660,14 @@ footer p{
                         KSh 1,000
                     </button>
 
+
                     <button
                         type="button"
                         class="amount-btn"
                         data-amount="2000">
                         KSh 2,000
                     </button>
+
 
                     <button
                         type="button"
@@ -638,12 +676,14 @@ footer p{
                         KSh 5,000
                     </button>
 
+
                     <button
                         type="button"
                         class="amount-btn"
                         data-amount="10000">
                         KSh 10,000
                     </button>
+
 
                     <button
                         type="button"
@@ -652,12 +692,25 @@ footer p{
                         KSh 20,000
                     </button>
 
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="50000">
+                        KSh 50,000
+                    </button>
+
+
                 </div>
 
 
+                <!-- CUSTOM AMOUNT -->
+
                 <div class="custom-amount currency-input">
 
-                    <span>KSh</span>
+                    <span>
+                        KSh
+                    </span>
 
                     <input
                         type="number"
@@ -672,6 +725,8 @@ footer p{
             </div>
 
 
+
+            <!-- PHONE -->
 
             <div class="form-group">
 
@@ -690,18 +745,28 @@ footer p{
 
 
 
+            <!-- INFO -->
+
             <div class="payment-info">
 
-                <strong>M-Pesa Payment</strong><br>
+                <strong>
+                    M-Pesa Payment
+                </strong>
 
-                After clicking Donate Now, an M-Pesa STK
-                Push will be sent to the number you provide.
-                Enter your M-Pesa PIN on your phone to
-                complete your donation.
+                <br>
+
+                After clicking Donate Now, an M-Pesa
+                STK Push will be sent to the number
+                you provide.
+
+                Enter your M-Pesa PIN on your phone
+                to complete your donation.
 
             </div>
 
 
+
+            <!-- BUTTON -->
 
             <button
                 type="button"
@@ -725,16 +790,19 @@ footer p{
             </button>
 
 
+            <!-- ERROR -->
+
             <div
                 id="errorMessage"
                 class="message">
             </div>
 
+
         </div>
 
 
 
-        <!-- PROCESSING -->
+        <!-- ================= PROCESSING ================= -->
 
         <div
             class="processing"
@@ -760,7 +828,7 @@ footer p{
 
 
 
-        <!-- SUCCESS -->
+        <!-- ================= SUCCESS ================= -->
 
         <div
             class="success-screen"
@@ -784,7 +852,8 @@ footer p{
             </div>
 
             <p>
-                Your support helps us continue our community work.
+                Your support helps us continue our
+                community work.
             </p>
 
             <div
@@ -800,6 +869,7 @@ footer p{
 
         </div>
 
+
     </div>
 
 </div>
@@ -807,6 +877,8 @@ footer p{
 </section>
 
 
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -824,19 +896,26 @@ footer p{
 
 <script>
 
-
 /* ======================================================
-   WEMA PAYMENT CONFIGURATION
+   BACKEND
 ====================================================== */
 
 const BACKEND_URL =
     "https://dan-wema-backend-1.onrender.com";
 
 
+/* ======================================================
+   SETTINGS
+====================================================== */
+
 const POLL_INTERVAL = 3000;
 
 const MAX_POLLS = 40;
 
+
+/* ======================================================
+   VARIABLES
+====================================================== */
 
 let currentTransactionId = null;
 
@@ -852,7 +931,7 @@ let pollTimer = null;
 
 
 /* ======================================================
-   QUICK AMOUNT BUTTONS
+   QUICK AMOUNT SELECTION
 ====================================================== */
 
 document
@@ -866,27 +945,73 @@ document
             const amount =
                 this.dataset.amount;
 
+
             document
-                .getElementById("amount")
-                .value =
+            .getElementById("amount")
+            .value =
                 amount;
 
 
             document
-                .querySelectorAll(".amount-btn")
-                .forEach(function(btn){
+            .querySelectorAll(".amount-btn")
+            .forEach(function(btn){
 
-                    btn.classList.remove("active");
+                btn.classList.remove(
+                    "active"
+                );
 
-                });
+            });
 
 
-            this.classList.add("active");
+            this.classList.add(
+                "active"
+            );
 
         }
     );
 
 });
+
+
+/* ======================================================
+   CUSTOM AMOUNT
+====================================================== */
+
+document
+.getElementById("amount")
+.addEventListener(
+    "input",
+    function(){
+
+        const entered =
+            this.value;
+
+
+        document
+        .querySelectorAll(".amount-btn")
+        .forEach(function(button){
+
+            if(
+                button.dataset.amount ===
+                entered
+            ){
+
+                button.classList.add(
+                    "active"
+                );
+
+            }else{
+
+                button.classList.remove(
+                    "active"
+                );
+
+            }
+
+        });
+
+    }
+);
 
 
 /* ======================================================
@@ -902,7 +1027,9 @@ function normalizePhone(phone){
         .replace(/-/g,"");
 
 
-    if(phone.startsWith("+254")){
+    if(
+        phone.startsWith("+254")
+    ){
 
         phone =
             phone.substring(1);
@@ -910,7 +1037,9 @@ function normalizePhone(phone){
     }
 
 
-    if(phone.startsWith("0")){
+    if(
+        phone.startsWith("0")
+    ){
 
         phone =
             "254" +
@@ -946,8 +1075,10 @@ function showError(message){
             "errorMessage"
         );
 
+
     box.textContent =
         message;
+
 
     box.className =
         "message error";
@@ -966,7 +1097,10 @@ function clearError(){
             "errorMessage"
         );
 
-    box.textContent = "";
+
+    box.textContent =
+        "";
+
 
     box.className =
         "message";
@@ -975,7 +1109,7 @@ function clearError(){
 
 
 /* ======================================================
-   LOADING
+   BUTTON LOADING
 ====================================================== */
 
 function setLoading(loading){
@@ -985,10 +1119,12 @@ function setLoading(loading){
             "payButton"
         );
 
+
     const spinner =
         document.getElementById(
             "buttonSpinner"
         );
+
 
     const text =
         document.getElementById(
@@ -1045,6 +1181,8 @@ async function startDonation(){
         .trim();
 
 
+    /* NAME */
+
     if(!name){
 
         showError(
@@ -1067,6 +1205,8 @@ async function startDonation(){
     }
 
 
+    /* AMOUNT */
+
     if(
         !Number.isFinite(amount) ||
         amount <= 0
@@ -1080,6 +1220,19 @@ async function startDonation(){
 
     }
 
+
+    if(amount < 1){
+
+        showError(
+            "The minimum donation amount is KSh 1."
+        );
+
+        return;
+
+    }
+
+
+    /* PHONE */
 
     phone =
         normalizePhone(phone);
@@ -1111,10 +1264,24 @@ async function startDonation(){
 
     try{
 
+
+        console.log(
+            "WEMA DONATION REQUEST",
+            {
+                name:name,
+                phone:phone,
+                amount:amount
+            }
+        );
+
+
+        /* SEND TO BACKEND */
+
         const response =
             await fetch(
                 `${BACKEND_URL}/stk-push`,
                 {
+
                     method:"POST",
 
                     headers:{
@@ -1138,6 +1305,7 @@ async function startDonation(){
 
         let data;
 
+
         try{
 
             data =
@@ -1153,7 +1321,7 @@ async function startDonation(){
 
 
         console.log(
-            "PAYLOR STK RESPONSE:",
+            "PAYLOR RESPONSE:",
             data
         );
 
@@ -1171,6 +1339,8 @@ async function startDonation(){
         }
 
 
+        /* TRANSACTION ID */
+
         currentTransactionId =
             data.transactionId ||
             data.checkout_request_id;
@@ -1185,33 +1355,36 @@ async function startDonation(){
         }
 
 
+        /* SHOW PROCESSING */
+
         document
-            .getElementById(
-                "donationForm"
-            )
-            .style.display =
+        .getElementById(
+            "donationForm"
+        )
+        .style.display =
             "none";
 
 
         document
-            .getElementById(
-                "processingScreen"
-            )
-            .style.display =
+        .getElementById(
+            "processingScreen"
+        )
+        .style.display =
             "block";
 
 
         document
-            .getElementById(
-                "processingAmount"
-            )
-            .textContent =
+        .getElementById(
+            "processingAmount"
+        )
+        .textContent =
             formatMoney(
                 currentAmount
             );
 
 
         pollCount = 0;
+
 
         checkPaymentStatus();
 
@@ -1226,6 +1399,7 @@ async function startDonation(){
 
         setLoading(false);
 
+
         showError(
             error.message ||
             "Unable to start payment. Please try again."
@@ -1237,7 +1411,7 @@ async function startDonation(){
 
 
 /* ======================================================
-   MONEY FORMAT
+   FORMAT MONEY
 ====================================================== */
 
 function formatMoney(amount){
@@ -1282,6 +1456,7 @@ async function checkPaymentStatus(){
             await fetch(
                 `${BACKEND_URL}/payment-status`,
                 {
+
                     method:"POST",
 
                     headers:{
@@ -1329,6 +1504,8 @@ async function checkPaymentStatus(){
             .trim();
 
 
+        /* SUCCESS */
+
         if(
             status === "completed" ||
             status === "complete" ||
@@ -1344,6 +1521,8 @@ async function checkPaymentStatus(){
         }
 
 
+        /* FAILED */
+
         if(
             status === "failed" ||
             status === "cancelled" ||
@@ -1358,6 +1537,8 @@ async function checkPaymentStatus(){
         }
 
 
+        /* KEEP CHECKING */
+
         pollTimer =
             setTimeout(
                 checkPaymentStatus,
@@ -1368,7 +1549,7 @@ async function checkPaymentStatus(){
     }catch(error){
 
         console.log(
-            "Temporary status error:",
+            "STATUS CHECK ERROR:",
             error.message
         );
 
@@ -1400,36 +1581,36 @@ function showSuccess(){
 
 
     document
-        .getElementById(
-            "processingScreen"
-        )
-        .style.display =
+    .getElementById(
+        "processingScreen"
+    )
+    .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "successScreen"
-        )
-        .style.display =
+    .getElementById(
+        "successScreen"
+    )
+    .style.display =
         "block";
 
 
     document
-        .getElementById(
-            "successAmount"
-        )
-        .textContent =
+    .getElementById(
+        "successAmount"
+    )
+    .textContent =
         formatMoney(
             currentAmount
         );
 
 
     document
-        .getElementById(
-            "successReference"
-        )
-        .textContent =
+    .getElementById(
+        "successReference"
+    )
+    .textContent =
         "Transaction ID: " +
         currentTransactionId;
 
@@ -1452,18 +1633,18 @@ function showPaymentFailed(){
 
 
     document
-        .getElementById(
-            "processingScreen"
-        )
-        .style.display =
+    .getElementById(
+        "processingScreen"
+    )
+    .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "donationForm"
-        )
-        .style.display =
+    .getElementById(
+        "donationForm"
+    )
+    .style.display =
         "block";
 
 
@@ -1493,18 +1674,18 @@ function showPaymentTimeout(){
 
 
     document
-        .getElementById(
-            "processingScreen"
-        )
-        .style.display =
+    .getElementById(
+        "processingScreen"
+    )
+    .style.display =
         "none";
 
 
     document
-        .getElementById(
-            "donationForm"
-        )
-        .style.display =
+    .getElementById(
+        "donationForm"
+    )
+    .style.display =
         "block";
 
 
@@ -1516,7 +1697,6 @@ function showPaymentTimeout(){
     );
 
 }
-
 
 </script>
 
