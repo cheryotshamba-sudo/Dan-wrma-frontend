@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Donate | Wema Charity Foundation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f5f8f6;
+    color:#24352d;
+    min-height:100vh;
+}
+
+:root{
+    --green:#176b4d;
+    --dark-green:#0b4936;
+    --light-green:#edf6f1;
+    --gold:#d8b65c;
+    --text:#68766f;
+    --border:#dfe8e3;
+}
+
+.container{
+    width:min(1050px,92%);
+    margin:auto;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    background:white;
+    border-bottom:1px solid #e9eeeb;
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+}
+
+.logo-mark{
+    width:43px;
+    height:43px;
+    background:var(--green);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:800;
+    font-size:20px;
+}
+
+.logo-text strong{
+    display:block;
+    color:var(--dark-green);
+    font-size:20px;
+    line-height:1;
+}
+
+.logo-text span{
+    display:block;
+    color:var(--green);
+    font-size:8px;
+    letter-spacing:1.7px;
+    margin-top:4px;
+}
+
+.back-link{
+    color:var(--green);
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+
+/* ================= PAGE ================= */
+
+.payment-section{
+    padding:55px 0 80px;
+}
+
+.payment-header{
+    text-align:center;
+    max-width:650px;
+    margin:0 auto 35px;
+}
+
+.eyebrow{
+    text-transform:uppercase;
+    color:var(--green);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.5px;
+    margin-bottom:9px;
+}
+
+.payment-header h1{
+    font-family:"Playfair Display",serif;
+    color:var(--dark-green);
+    font-size:clamp(34px,6vw,52px);
+    line-height:1.15;
+    margin-bottom:12px;
+}
+
+.payment-header p{
+    color:var(--text);
+    font-size:15px;
+}
+
+
+/* ================= CARD ================= */
+
+.payment-card{
+    width:min(540px,100%);
+    margin:auto;
+    background:white;
+    border:1px solid var(--border);
+    box-shadow:0 18px 55px rgba(19,63,47,.08);
+    padding:32px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    color:var(--dark-green);
+    font-weight:700;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.form-group input{
+    width:100%;
+    height:52px;
+    padding:0 15px;
+    border:1px solid #d6e1db;
+    border-radius:5px;
+    outline:none;
+    color:#26372f;
+    font-size:15px;
+    background:white;
+}
+
+.form-group input:focus{
+    border-color:var(--green);
+    box-shadow:0 0 0 3px rgba(23,107,77,.08);
+}
+
+
+/* ================= AMOUNTS ================= */
+
+.amount-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+    margin-bottom:12px;
+}
+
+.amount-btn{
+    height:46px;
+    border:1px solid #d5e1db;
+    background:var(--light-green);
+    color:var(--dark-green);
+    border-radius:5px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.amount-btn:hover{
+    border-color:var(--green);
+}
+
+.amount-btn.active{
+    background:var(--green);
+    color:white;
+    border-color:var(--green);
+}
+
+.custom-amount{
+    margin-top:9px;
+}
+
+.currency-input{
+    position:relative;
+}
+
+.currency-input span{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:var(--green);
+    font-weight:800;
+}
+
+.currency-input input{
+    padding-left:55px;
+}
+
+
+/* ================= INFO ================= */
+
+.payment-info{
+    background:var(--light-green);
+    border-left:4px solid var(--green);
+    padding:13px 15px;
+    margin:20px 0;
+    color:#53635b;
+    font-size:12px;
+    line-height:1.55;
+}
+
+
+/* ================= BUTTON ================= */
+
+.pay-button{
+    width:100%;
+    height:55px;
+    border:0;
+    border-radius:5px;
+    background:var(--green);
+    color:white;
+    font-weight:800;
+    font-size:15px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.pay-button:hover{
+    background:var(--dark-green);
+}
+
+.pay-button:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+.button-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+
+/* ================= SPINNER ================= */
+
+.spinner{
+    width:19px;
+    height:19px;
+    border:3px solid rgba(255,255,255,.35);
+    border-top-color:white;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+    display:none;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* ================= MESSAGES ================= */
+
+.message{
+    display:none;
+    margin-top:15px;
+    padding:13px;
+    border-radius:5px;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.message.error{
+    display:block;
+    background:#fff0f0;
+    color:#a32929;
+    border:1px solid #f1caca;
+}
+
+.message.success{
+    display:block;
+    background:#edf8f1;
+    color:#176b4d;
+    border:1px solid #cce5d7;
+}
+
+
+/* ================= PROCESSING ================= */
+
+.processing{
+    display:none;
+    text-align:center;
+    padding:15px 5px 5px;
+}
+
+.processing-icon{
+    width:65px;
+    height:65px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    border:5px solid #dcece5;
+    border-top-color:var(--green);
+    animation:spin 1s linear infinite;
+}
+
+.processing h2{
+    font-family:"Playfair Display",serif;
+    color:var(--dark-green);
+    font-size:29px;
+    margin-bottom:8px;
+}
+
+.processing p{
+    color:var(--text);
+    font-size:14px;
+}
+
+.processing-amount{
+    margin-top:15px;
+    font-size:24px;
+    font-weight:800;
+    color:var(--green);
+}
+
+
+/* ================= SUCCESS ================= */
+
+.success-screen{
+    display:none;
+    text-align:center;
+    padding:10px 5px;
+}
+
+.success-icon{
+    width:76px;
+    height:76px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:#e8f6ee;
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-weight:800;
+}
+
+.success-screen h2{
+    font-family:"Playfair Display",serif;
+    color:var(--dark-green);
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.success-screen p{
+    color:var(--text);
+    font-size:14px;
+    line-height:1.6;
+}
+
+.success-amount{
+    font-size:29px;
+    font-weight:800;
+    color:var(--green);
+    margin:15px 0;
+}
+
+.success-reference{
+    background:var(--light-green);
+    padding:13px;
+    margin:20px 0;
+    font-size:12px;
+    color:#52635b;
+    word-break:break-word;
+}
+
+.home-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:0 24px;
+    background:var(--green);
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:700;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:var(--dark-green);
+    color:white;
+    text-align:center;
+    padding:27px 15px;
+}
+
+footer strong{
+    display:block;
+    margin-bottom:5px;
+}
+
+footer p{
+    color:#b8c9c1;
+    font-size:12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:520px){
+
+    .nav{
+        height:68px;
+    }
+
+    .back-link{
+        font-size:13px;
+    }
+
+    .payment-section{
+        padding:35px 0 55px;
+    }
+
+    .payment-card{
+        padding:23px 18px;
+    }
+
+    .payment-header h1{
+        font-size:37px;
+    }
+
+    .payment-header p{
+        font-size:14px;
+    }
+
+    .amount-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .amount-btn{
+        font-size:12px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container nav">
+
+    <a href="index.html" class="logo">
+
+        <div class="logo-mark">
+            W
+        </div>
+
+        <div class="logo-text">
+            <strong>WEMA</strong>
+            <span>CHARITY FOUNDATION</span>
+        </div>
+
+    </a>
+
+    <a href="index.html" class="back-link">
+        ← Back
+    </a>
+
+</div>
+
+</header>
+
+
+<!-- ================= PAYMENT ================= -->
+
+<section class="payment-section">
+
+<div class="container">
+
+    <div class="payment-header">
+
+        <div class="eyebrow">
+            Support Our Mission
+        </div>
+
+        <h1>
+            Make a Donation
+        </h1>
+
+        <p>
+            Your contribution helps us support education,
+            healthcare, food relief, clean water and
+            community development.
+        </p>
+
+    </div>
+
+
+    <div class="payment-card">
+
+
+        <!-- ================= DONATION FORM ================= -->
+
+        <div id="donationForm">
+
+            <div class="form-group">
+
+                <label for="donorName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="donorName"
+                    placeholder="Enter your full name"
+                    autocomplete="name">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Donation Amount
+                </label>
+
+
+                <div class="amount-grid">
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="500">
+                        KSh 500
+                    </button>
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="1000">
+                        KSh 1,000
+                    </button>
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="2000">
+                        KSh 2,000
+                    </button>
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="5000">
+                        KSh 5,000
+                    </button>
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="10000">
+                        KSh 10,000
+                    </button>
+
+                    <button
+                        type="button"
+                        class="amount-btn"
+                        data-amount="20000">
+                        KSh 20,000
+                    </button>
+
+                </div>
+
+
+                <div class="custom-amount currency-input">
+
+                    <span>KSh</span>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Enter any amount"
+                        min="1"
+                        step="0.01"
+                        inputmode="decimal">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    M-Pesa Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="07XXXXXXXX or 2547XXXXXXXX"
+                    inputmode="tel"
+                    autocomplete="tel">
+
+            </div>
+
+
+            <div class="payment-info">
+
+                <strong>M-Pesa payment</strong><br>
+
+                After you click Donate, an M-Pesa STK Push
+                will be sent to the phone number you provide.
+                Enter your M-Pesa PIN on your phone to complete
+                the donation.
+
+            </div>
+
+
+            <button
+                type="button"
+                class="pay-button"
+                id="payButton"
+                onclick="startDonation()">
+
+                <span class="button-content">
+
+                    <span
+                        class="spinner"
+                        id="buttonSpinner">
+                    </span>
+
+                    <span id="buttonText">
+                        Donate Now
+                    </span>
+
+                </span>
+
+            </button>
+
+
+            <div
+                id="errorMessage"
+                class="message">
+            </div>
+
+        </div>
+
+
+        <!-- ================= PROCESSING ================= -->
+
+        <div
+            class="processing"
+            id="processingScreen">
+
+            <div class="processing-icon"></div>
+
+            <h2>
+                Payment Processing
+            </h2>
+
+            <p id="processingMessage">
+                Please check your phone and enter your
+                M-Pesa PIN to complete your donation.
+            </p>
+
+            <div
+                class="processing-amount"
+                id="processingAmount">
+            </div>
+
+        </div>
+
+
+        <!-- ================= SUCCESS ================= -->
+
+        <div
+            class="success-screen"
+            id="successScreen">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Thank You!
+            </h2>
+
+            <p>
+                Your donation has been successfully
+                received.
+            </p>
+
+            <div
+                class="success-amount"
+                id="successAmount">
+            </div>
+
+            <p>
+                Your support helps us continue our
+                community work.
+            </p>
+
+            <div
+                class="success-reference"
+                id="successReference">
+            </div>
+
+            <a
+                href="index.html"
+                class="home-button">
+                Return Home
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>
+        Wema Charity Foundation
+    </strong>
+
+    <p>
+        Empowering hope, shaping futures and transforming lives.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/*
+==========================================================
+WEMA CHARITY FOUNDATION
+PAYMENT CONFIGURATION
+==========================================================
+*/
+
+
+/*
+IMPORTANT:
+
+This is your BACKEND.
+
+Do not change this unless you deploy the backend
+to another URL.
+*/
+
+const BACKEND_URL =
+    "https://dan-wema-backend-1.onrender.com";
+
+
+/*
+Payment polling settings
+*/
+
+const POLL_INTERVAL =
+    3000;
+
+const MAX_POLLS =
+    40;
+
+
+/*
+Runtime variables
+*/
+
+let currentTransactionId = null;
+
+let currentAmount = null;
+
+let currentDonorName = null;
+
+let currentPhone = null;
+
+let pollCount = 0;
+
+let pollTimer = null;
+
+
+/* ======================================================
+   AMOUNT BUTTONS
+====================================================== */
+
+document
+.querySelectorAll(".amount-btn")
+.forEach(function(button){
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            const selectedAmount =
+                this.dataset.amount;
+
+            document
+                .getElementById("amount")
+                .value =
+                selectedAmount;
+
+
+            document
+                .querySelectorAll(".amount-btn")
+                .forEach(function(btn){
+
+                    btn.classList.remove("active");
+
+                });
+
+
+            this.classList.add("active");
+
+        }
+    );
+
+});
+
+
+/* Remove quick amount selection when custom amount changes */
+
+document
+.getElementById("amount")
+.addEventListener(
+    "input",
+    function(){
+
+        document
+            .querySelectorAll(".amount-btn")
+            .forEach(function(btn){
+
+                if (
+                    btn.dataset.amount !==
+                    this.value
+                ){
+                    btn.classList.remove("active");
+                }
+
+            }, this);
+
+    }
+);
+
+
+/* ======================================================
+   PHONE NORMALIZATION
+====================================================== */
+
+function normalizePhone(phone){
+
+    phone =
+        String(phone)
+        .trim()
+        .replace(/\s+/g,"")
+        .replace(/-/g,"");
+
+
+    if(phone.startsWith("+254")){
+
+        phone =
+            phone.substring(1);
+
+    }
+
+
+    if(phone.startsWith("0")){
+
+        phone =
+            "254" +
+            phone.substring(1);
+
+    }
+
+
+    return phone;
+
+}
+
+
+/* ======================================================
+   VALIDATE PHONE
+====================================================== */
+
+function validPhone(phone){
+
+    return /^2547\d{8}$/.test(phone);
+
+}
+
+
+/* ======================================================
+   SHOW ERROR
+====================================================== */
+
+function showError(message){
+
+    const box =
+        document.getElementById(
+            "errorMessage"
+        );
+
+    box.textContent =
+        message;
+
+    box.className =
+        "message error";
+
+}
+
+
+/* ======================================================
+   CLEAR ERROR
+====================================================== */
+
+function clearError(){
+
+    const box =
+        document.getElementById(
+            "errorMessage"
+        );
+
+    box.textContent = "";
+
+    box.className =
+        "message";
+
+}
+
+
+/* ======================================================
+   BUTTON LOADING
+====================================================== */
+
+function setLoading(loading){
+
+    const button =
+        document.getElementById(
+            "payButton"
+        );
+
+    const spinner =
+        document.getElementById(
+            "buttonSpinner"
+        );
+
+    const text =
+        document.getElementById(
+            "buttonText"
+        );
+
+
+    button.disabled =
+        loading;
+
+
+    spinner.style.display =
+        loading ? "block" : "none";
+
+
+    text.textContent =
+        loading
+        ? "Connecting to M-Pesa..."
+        : "Donate Now";
+
+}
+
+
+/* ======================================================
+   START DONATION
+====================================================== */
+
+async function startDonation(){
+
+    clearError();
+
+
+    const name =
+        document
+        .getElementById("donorName")
+        .value
+        .trim();
+
+
+    const amount =
+        Number(
+            document
+            .getElementById("amount")
+            .value
+        );
+
+
+    let phone =
+        document
+        .getElementById("phone")
+        .value
+        .trim();
+
+
+    /* ------------------------------
+       VALIDATE NAME
+    ------------------------------ */
+
+    if(!name){
+
+        showError(
+            "Please enter your name."
+        );
+
+        return;
+
+    }
+
+
+    if(name.length < 2){
+
+        showError(
+            "Please enter your full name."
+        );
+
+        return;
+
+    }
+
+
+    /* ------------------------------
+       VALIDATE AMOUNT
+    ------------------------------ */
+
+    if(
+        !Number.isFinite(amount) ||
+        amount <= 0
+    ){
+
+        showError(
+            "Please enter a valid donation amount."
+        );
+
+        return;
+
+    }
+
+
+    if(amount < 1){
+
+        showError(
+            "The minimum donation amount is KSh 1."
+        );
+
+        return;
+
+    }
+
+
+    /* ------------------------------
+       NORMALIZE PHONE
+    ------------------------------ */
+
+    phone =
+        normalizePhone(phone);
+
+
+    if(!validPhone(phone)){
+
+        showError(
+            "Please enter a valid Kenyan M-Pesa number, for example 0712345678."
+        );
+
+        return;
+
+    }
+
+
+    /* ------------------------------
+       SAVE CURRENT DATA
+    ------------------------------ */
+
+    currentDonorName =
+        name;
+
+    currentAmount =
+        amount;
+
+    currentPhone =
+        phone;
+
+
+    /* ------------------------------
+       LOADING
+    ------------------------------ */
+
+    setLoading(true);
+
+
+    try{
+
+        console.log(
+            "Starting Wema donation..."
+        );
+
+        console.log({
+            name:name,
+            phone:phone,
+            amount:amount
+        });
+
+
+        /* ------------------------------
+           CALL BACKEND
+        ------------------------------ */
+
+        const response =
+            await fetch(
+                `${BACKEND_URL}/stk-push`,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+
+                        name:name,
+
+                        phone:phone,
+
+                        amount:amount
+
+                    })
+
+                }
+            );
+
+
+        let data = null;
+
+
+        try{
+
+            data =
+                await response.json();
+
+        }catch(jsonError){
+
+            throw new Error(
+                "The payment server returned an invalid response."
+            );
+
+        }
+
+
+        console.log(
+            "STK PUSH RESPONSE:",
+            data
+        );
+
+
+        /* ------------------------------
+           BACKEND ERROR
+        ------------------------------ */
+
+        if(
+            !response.ok ||
+            !data.success
+        ){
+
+            throw new Error(
+                data.message ||
+                "Unable to start the payment."
+            );
+
+        }
+
+
+        /* ------------------------------
+           TRANSACTION ID
+        ------------------------------ */
+
+        currentTransactionId =
+            data.transactionId ||
+            data.checkout_request_id;
+
+
+        if(!currentTransactionId){
+
+            throw new Error(
+                "Payment was started but no transaction ID was returned."
+            );
+
+        }
+
+
+        /* ------------------------------
+           SHOW PROCESSING
+        ------------------------------ */
+
+        document
+            .getElementById(
+                "donationForm"
+            )
+            .style.display =
+            "none";
+
+
+        document
+            .getElementById(
+                "processingScreen"
+            )
+            .style.display =
+            "block";
+
+
+        document
+            .getElementById(
+                "processingAmount"
+            )
+            .textContent =
+            formatMoney(currentAmount);
+
+
+        /*
+        Begin checking payment status
+        */
+
+        pollCount = 0;
+
+        startPaymentPolling();
+
+
+    }catch(error){
+
+        console.error(
+            "DONATION ERROR:",
+            error
+        );
+
+
+        showError(
+            error.message ||
+            "Unable to start payment. Please try again."
+        );
+
+
+        setLoading(false);
+
+    }
+
+}
+
+
+/* ======================================================
+   FORMAT MONEY
+====================================================== */
+
+function formatMoney(amount){
+
+    return (
+        "KSh " +
+        Number(amount)
+        .toLocaleString(
+            "en-KE",
+            {
+                minimumFractionDigits:0,
+                maximumFractionDigits:2
+            }
+        )
+    );
+
+}
+
+
+/* ======================================================
+   START PAYMENT POLLING
+====================================================== */
+
+function startPaymentPolling(){
+
+    if(pollTimer){
+
+        clearTimeout(
+            pollTimer
+        );
+
+    }
+
+
+    checkPaymentStatus();
+
+}
+
+
+/* ======================================================
+   CHECK PAYMENT STATUS
+====================================================== */
+
+async function checkPaymentStatus(){
+
+    pollCount++;
+
+
+    console.log(
+        "Checking payment status:",
+        pollCount
+    );
+
+
+    if(
+        pollCount >
+        MAX_POLLS
+    ){
+
+        showPaymentTimeout();
+
+        return;
+
+    }
+
+
+    try{
+
+        const response =
+            await fetch(
+                `${BACKEND_URL}/payment-status`,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:JSON.stringify({
+
+                        transactionId:
+                            currentTransactionId
+
+                    })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "PAYMENT STATUS:",
+            data
+        );
+
+
+        if(!response.ok){
+
+            throw new Error(
+                data.message ||
+                "Unable to check payment status."
+            );
+
+        }
+
+
+        const status =
+            String(
+                data.status ||
+                data.data?.status ||
+                ""
+            )
+            .toLowerCase()
+            .trim();
+
+
+        /*
+        SUCCESS STATUSES
+        */
+
+        if(
+            status === "completed" ||
+            status === "complete" ||
+            status === "success" ||
+            status === "successful" ||
+            status === "paid"
+        ){
+
+            showSuccess();
+
+            return;
+
+        }
+
+
+        /*
+        FAILED STATUSES
+        */
+
+        if(
+            status === "failed" ||
+            status === "cancelled" ||
+            status === "canceled" ||
+            status === "rejected"
+        ){
+
+            showPaymentFailed(
+                status
+            );
+
+            return;
+
+        }
+
+
+        /*
+        STILL PENDING
+
+        Continue polling.
+        */
+
+        pollTimer =
+            setTimeout(
+                checkPaymentStatus,
+                POLL_INTERVAL
+            );
+
+
+    }catch(error){
+
+        console.error(
+            "STATUS CHECK ERROR:",
+            error
+        );
+
+
+        /*
+        A temporary status-check failure
+        should not immediately cancel the
+        donation.
+
+        Continue checking.
+        */
+
+        pollTimer =
+            setTimeout(
+                checkPaymentStatus,
+                POLL_INTERVAL
+            );
+
+    }
+
+}
+
+
+/* ======================================================
+   SUCCESS SCREEN
+====================================================== */
+
+function showSuccess(){
+
+    if(pollTimer){
+
+        clearTimeout(
+            pollTimer
+        );
+
+    }
+
+
+    document
+        .getElementById(
+            "processingScreen"
+        )
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById(
+            "successScreen"
+        )
+        .style.display =
+        "block";
+
+
+    document
+        .getElementById(
+            "successAmount"
+        )
+        .textContent =
+        formatMoney(
+            currentAmount
+        );
+
+
+    document
+        .getElementById(
+            "successReference"
+        )
+        .textContent =
+        "Transaction ID: " +
+        currentTransactionId;
+
+
+    console.log(
+        "DONATION SUCCESSFUL"
+    );
+
+}
+
+
+/* ======================================================
+   FAILED PAYMENT
+====================================================== */
+
+function showPaymentFailed(status){
+
+    if(pollTimer){
+
+        clearTimeout(
+            pollTimer
+        );
+
+    }
+
+
+    document
+        .getElementById(
+            "processingScreen"
+        )
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById(
+            "donationForm"
+        )
+        .style.display =
+        "block";
+
+
+    setLoading(false);
+
+
+    showError(
+        "The M-Pesa payment was " +
+        (
+            status === "cancelled" ||
+            status === "canceled"
+            ? "cancelled."
+            : "not completed."
+        ) +
+        " Please try again."
+    );
+
+}
+
+
+/* ======================================================
+   PAYMENT TIMEOUT
+====================================================== */
+
+function showPaymentTimeout(){
+
+    if(pollTimer){
+
+        clearTimeout(
+            pollTimer
+        );
+
+    }
+
+
+    document
+        .getElementById(
+            "processingScreen"
+        )
+        .style.display =
+        "none";
+
+
+    document
+        .getElementById(
+            "donationForm"
+        )
+        .style.display =
+        "block";
+
+
+    setLoading(false);
+
+
+    showError(
+        "We could not confirm the payment yet. If you completed the M-Pesa payment, please wait a moment and check your transaction before trying again."
+    );
+
+}
+
+
+/* ======================================================
+   PAGE CLEANUP
+====================================================== */
+
+window.addEventListener(
+    "beforeunload",
+    function(){
+
+        if(pollTimer){
+
+            clearTimeout(
+                pollTimer
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
