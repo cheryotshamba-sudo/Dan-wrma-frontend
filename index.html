@@ -8,9 +8,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -50,10 +51,15 @@ textarea{
     --light-green:#edf6f1;
     --cream:#f8f5ed;
     --gold:#d8b65c;
+    --bright-gold:#ffbf19;
+    --gold-hover:#ffd34d;
     --dark:#1d2d26;
     --text:#65736d;
     --border:#e4ebe7;
 }
+
+
+/* ================= CONTAINER ================= */
 
 .container{
     width:min(1180px,92%);
@@ -148,7 +154,7 @@ header{
     background:var(--green);
     color:white!important;
     padding:12px 20px;
-    border-radius:4px;
+    border-radius:5px;
 }
 
 .nav-donate:hover{
@@ -161,29 +167,32 @@ header{
     border:0;
     font-size:28px;
     color:var(--dark-green);
+    cursor:pointer;
 }
 
 
 /* ================= HERO ================= */
 
 .hero{
-    min-height:680px;
+    min-height:calc(100vh - 82px);
     display:flex;
     align-items:center;
+
     background:
     linear-gradient(
         90deg,
-        rgba(6,49,36,.94),
-        rgba(6,49,36,.70),
-        rgba(6,49,36,.22)
+        rgba(6,49,36,.95),
+        rgba(6,49,36,.74),
+        rgba(6,49,36,.25)
     ),
+
     url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
+    center/cover no-repeat;
 }
 
 .hero-content{
     max-width:710px;
-    padding:100px 0;
+    padding:65px 0;
     color:white;
 }
 
@@ -191,61 +200,84 @@ header{
     text-transform:uppercase;
     letter-spacing:3px;
     font-size:12px;
-    font-weight:700;
+    font-weight:800;
     color:var(--gold);
-    margin-bottom:18px;
+    margin-bottom:16px;
 }
 
 .hero h1{
     font-family:"Playfair Display",serif;
     font-size:clamp(44px,6vw,75px);
-    line-height:1.08;
+    line-height:1.06;
     font-weight:600;
-    margin-bottom:24px;
+    margin-bottom:22px;
 }
 
 .hero h1 span{
-    color:#e1c367;
+    color:#ffd45a;
 }
 
 .hero p{
     max-width:600px;
-    color:rgba(255,255,255,.9);
+    color:rgba(255,255,255,.92);
     font-size:17px;
+    line-height:1.6;
 }
+
+
+/* ================= HERO BUTTONS ================= */
 
 .hero-buttons{
     display:flex;
     gap:13px;
-    margin-top:32px;
+    margin-top:27px;
     flex-wrap:wrap;
 }
 
 .btn{
     border:0;
-    border-radius:4px;
+    border-radius:5px;
     padding:14px 25px;
     font-size:14px;
-    font-weight:700;
-    transition:.25s;
+    font-weight:800;
+    transition:.25s ease;
+    cursor:pointer;
+    display:inline-block;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
-.btn-green{
-    background:var(--green);
-    color:white;
+
+/* MAIN DONATE BUTTON */
+
+.btn-donate{
+    background:#ffbf19;
+    color:#102b20;
+    border:2px solid #ffe071;
+    padding:16px 31px;
+    font-size:16px;
+    font-weight:800;
+
+    box-shadow:
+        0 7px 22px rgba(0,0,0,.30),
+        0 0 0 2px rgba(255,191,25,.18);
 }
 
-.btn-green:hover{
-    background:#10543c;
+.btn-donate:hover{
+    background:#ffd34d;
+    color:#092218;
+    box-shadow:0 10px 28px rgba(0,0,0,.35);
 }
 
 .btn-light{
     background:white;
     color:var(--dark-green);
+}
+
+.btn-light:hover{
+    background:#f3f3f3;
 }
 
 
@@ -460,8 +492,15 @@ header{
 
 .support-button{
     margin-top:25px;
-    background:#dfbd63;
+    background:#ffbf19;
     color:#153f30;
+    border:2px solid #ffe071;
+    font-size:16px;
+    font-weight:800;
+}
+
+.support-button:hover{
+    background:#ffd34d;
 }
 
 
@@ -687,6 +726,7 @@ header{
     color:white;
     padding:0 25px;
     font-weight:700;
+    cursor:pointer;
 }
 
 
@@ -864,7 +904,7 @@ footer{
 }
 
 
-/* ================= MOBILE ================= */
+/* ================= TABLET ================= */
 
 @media(max-width:1000px){
 
@@ -886,6 +926,8 @@ footer{
 
 }
 
+
+/* ================= MOBILE ================= */
 
 @media(max-width:780px){
 
@@ -953,32 +995,74 @@ footer{
 }
 
 
+/* ================= SMALL PHONES ================= */
+
 @media(max-width:520px){
 
     .container{
         width:90%;
     }
 
+    /*
+       IMPORTANT:
+       The hero now fits inside the first mobile
+       viewport instead of forcing the Donate button
+       below the fold.
+    */
+
     .hero{
-        min-height:650px;
+        min-height:calc(100svh - 70px);
+        align-items:center;
+    }
+
+    .hero-content{
+        padding:32px 0 38px;
+    }
+
+    .hero .eyebrow{
+        font-size:10px;
+        letter-spacing:2.5px;
+        margin-bottom:11px;
     }
 
     .hero h1{
-        font-size:43px;
+        font-size:39px;
+        line-height:1.04;
+        margin-bottom:16px;
     }
 
     .hero p{
-        font-size:15px;
+        font-size:14px;
+        line-height:1.5;
+        max-width:100%;
     }
 
     .hero-buttons{
         display:grid;
         grid-template-columns:1fr;
+        gap:10px;
+        margin-top:20px;
     }
 
     .hero-buttons .btn{
         width:100%;
         text-align:center;
+    }
+
+    /*
+       Large, bright Donate Now button
+    */
+
+    .btn-donate{
+        min-height:56px;
+        padding:16px 20px;
+        font-size:17px;
+        border-radius:6px;
+    }
+
+    .btn-light{
+        min-height:50px;
+        padding:14px 20px;
     }
 
     .intro,
@@ -1042,23 +1126,66 @@ footer{
 
 }
 
+
+/* ================= VERY SMALL PHONES ================= */
+
+@media(max-width:380px){
+
+    .hero-content{
+        padding:25px 0 30px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:13px;
+    }
+
+    .hero-buttons{
+        margin-top:16px;
+    }
+
+    .btn-donate{
+        min-height:52px;
+        font-size:16px;
+        padding:14px 18px;
+    }
+
+    .btn-light{
+        min-height:46px;
+    }
+
+}
+
 </style>
 </head>
+
 
 <body>
 
 
-<!-- TOP BAR -->
+<!-- ================= TOP BAR ================= -->
 
 <div class="topbar">
+
     <div class="container topbar-inner">
-        <span>Kenya • Community • Compassion</span>
-        <a href="#contact">Get involved</a>
+
+        <span>
+            Kenya • Community • Compassion
+        </span>
+
+        <a href="#contact">
+            Get involved
+        </a>
+
     </div>
+
 </div>
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -1071,8 +1198,15 @@ footer{
         </div>
 
         <div class="logo-text">
-            <strong>WEMA</strong>
-            <span>CHARITY FOUNDATION</span>
+
+            <strong>
+                WEMA
+            </strong>
+
+            <span>
+                CHARITY FOUNDATION
+            </span>
+
         </div>
 
     </a>
@@ -1080,16 +1214,33 @@ footer{
 
     <nav class="nav-links" id="navLinks">
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#causes">Causes</a>
-        <a href="#stories">Stories</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">
+            Home
+        </a>
 
-        <!-- IMPORTANT: GOES TO PAYMENT PAGE -->
+        <a href="#about">
+            About
+        </a>
 
-        <a href="./payment.html" class="nav-donate">
+        <a href="#programs">
+            Programs
+        </a>
+
+        <a href="#causes">
+            Causes
+        </a>
+
+        <a href="#stories">
+            Stories
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+        <a
+            href="./payment.html"
+            class="nav-donate">
             Donate
         </a>
 
@@ -1098,8 +1249,11 @@ footer{
 
     <button
         class="mobile-menu"
-        onclick="toggleMenu()">
+        onclick="toggleMenu()"
+        aria-label="Open menu">
+
         ☰
+
     </button>
 
 </div>
@@ -1107,7 +1261,7 @@ footer{
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
@@ -1119,31 +1273,46 @@ footer{
         Through Giving
     </div>
 
+
     <h1>
+
         Empowering Hope,
-        <span>Shaping Futures,</span>
+        <span>
+            Shaping Futures,
+        </span>
         Transforming Lives
+
     </h1>
 
+
     <p>
-        Through giving, compassion and community action, we work
-        together to transform lives and nurture hope across Kenya.
+
+        Through giving, compassion and community action,
+        we work together to transform lives and nurture
+        hope across Kenya.
+
     </p>
+
 
     <div class="hero-buttons">
 
-        <!-- PAYMENT PAGE -->
+        <!-- PRIMARY DONATION BUTTON -->
 
         <a
             href="./payment.html"
-            class="btn btn-green">
-            Make a Donation
+            class="btn btn-donate">
+
+            ❤️ DONATE NOW
+
         </a>
+
 
         <a
             href="#about"
             class="btn btn-light">
+
             Learn More
+
         </a>
 
     </div>
@@ -1155,7 +1324,7 @@ footer{
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section class="intro" id="about">
 
@@ -1188,13 +1357,13 @@ footer{
         </h2>
 
         <p>
-            Our commitment is guided by compassion, community welfare
-            and sustainable development.
+            Our commitment is guided by compassion,
+            community welfare and sustainable development.
         </p>
 
         <p>
-            We work to support vulnerable individuals and families
-            through meaningful community programs.
+            We work to support vulnerable individuals
+            and families through meaningful community programs.
         </p>
 
         <a href="#programs" class="small-link">
@@ -1208,7 +1377,7 @@ footer{
 </section>
 
 
-<!-- FOCUS -->
+<!-- ================= FOCUS ================= -->
 
 <section class="focus">
 
@@ -1225,8 +1394,8 @@ footer{
         </h2>
 
         <p>
-            Our commitment is guided by compassion, community welfare
-            and sustainable development.
+            Our commitment is guided by compassion,
+            community welfare and sustainable development.
         </p>
 
     </div>
@@ -1271,7 +1440,7 @@ footer{
 </section>
 
 
-<!-- WHAT WE DO -->
+<!-- ================= MISSION ================= -->
 
 <section class="mission">
 
@@ -1312,8 +1481,8 @@ footer{
                 </h3>
 
                 <p>
-                    Our mission is to alleviate suffering and restore
-                    dignity to vulnerable communities.
+                    Our mission is to alleviate suffering and
+                    restore dignity to vulnerable communities.
                 </p>
 
             </div>
@@ -1371,7 +1540,7 @@ footer{
 </section>
 
 
-<!-- DONATION CTA -->
+<!-- ================= SUPPORT ================= -->
 
 <section class="support">
 
@@ -1388,17 +1557,17 @@ footer{
         </h2>
 
         <p>
-            Your contribution helps us continue vital work in
-            education, healthcare, food relief, clean water and
-            community development.
+            Your contribution helps us continue vital work
+            in education, healthcare, food relief, clean water
+            and community development.
         </p>
-
-        <!-- PAYMENT PAGE -->
 
         <a
             href="./payment.html"
             class="btn support-button">
+
             Donate Now
+
         </a>
 
     </div>
@@ -1414,7 +1583,7 @@ footer{
 </section>
 
 
-<!-- TRUST -->
+<!-- ================= TRUST ================= -->
 
 <section class="trust">
 
@@ -1522,7 +1691,7 @@ footer{
 </section>
 
 
-<!-- PROGRAMS -->
+<!-- ================= PROGRAMS ================= -->
 
 <section class="programs" id="programs">
 
@@ -1540,8 +1709,8 @@ footer{
         </h2>
 
         <p>
-            Explore programs promoting education, healthcare access
-            and community development.
+            Explore programs promoting education,
+            healthcare access and community development.
         </p>
 
     </div>
@@ -1633,7 +1802,7 @@ footer{
 </section>
 
 
-<!-- CAUSES -->
+<!-- ================= CAUSES ================= -->
 
 <section class="causes" id="causes">
 
@@ -1651,8 +1820,8 @@ footer{
         </h2>
 
         <p>
-            Your support helps communities build stronger and more
-            sustainable futures.
+            Your support helps communities build stronger
+            and more sustainable futures.
         </p>
 
     </div>
@@ -1673,8 +1842,8 @@ footer{
                 </h3>
 
                 <p>
-                    Help children access education and build brighter
-                    futures.
+                    Help children access education and build
+                    brighter futures.
                 </p>
 
             </div>
@@ -1753,7 +1922,7 @@ footer{
 </section>
 
 
-<!-- TESTIMONIALS -->
+<!-- ================= TESTIMONIALS ================= -->
 
 <section class="testimonials">
 
@@ -1770,8 +1939,8 @@ footer{
         </h2>
 
         <p>
-            Discover heartfelt messages from people who believe in
-            the mission.
+            Discover heartfelt messages from people who believe
+            in the mission.
         </p>
 
     </div>
@@ -1781,7 +1950,9 @@ footer{
 
         <article class="testimonial-card">
 
-            <div class="quote">“</div>
+            <div class="quote">
+                “
+            </div>
 
             <p>
                 I am always touched to see the great work you are
@@ -1801,7 +1972,9 @@ footer{
 
         <article class="testimonial-card">
 
-            <div class="quote">“</div>
+            <div class="quote">
+                “
+            </div>
 
             <p>
                 May God remember the work that you do to reach out
@@ -1821,7 +1994,9 @@ footer{
 
         <article class="testimonial-card">
 
-            <div class="quote">“</div>
+            <div class="quote">
+                “
+            </div>
 
             <p>
                 You have really shown your true nature. Continue with
@@ -1845,7 +2020,7 @@ footer{
 </section>
 
 
-<!-- NEWSLETTER -->
+<!-- ================= NEWSLETTER ================= -->
 
 <section class="newsletter">
 
@@ -1860,9 +2035,10 @@ footer{
     </h2>
 
     <p>
-        Subscribe to receive updates about our work, programs and
-        success stories.
+        Subscribe to receive updates about our work,
+        programs and success stories.
     </p>
+
 
     <form
         class="newsletter-form"
@@ -1884,7 +2060,7 @@ footer{
 </section>
 
 
-<!-- STORIES -->
+<!-- ================= STORIES ================= -->
 
 <section class="stories" id="stories">
 
@@ -1927,8 +2103,8 @@ footer{
                 </h3>
 
                 <p>
-                    An incredible transformation through housing and
-                    community support.
+                    An incredible transformation through housing
+                    and community support.
                 </p>
 
             </div>
@@ -1992,7 +2168,7 @@ footer{
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section class="contact" id="contact">
 
@@ -2009,26 +2185,49 @@ footer{
         </h2>
 
         <p class="contact-intro">
-            Reach out to learn more about our programs, share your
-            ideas or support our mission.
+            Reach out to learn more about our programs, share
+            your ideas or support our mission.
         </p>
 
 
         <div class="contact-details">
 
             <div class="contact-detail">
-                <strong>Phone</strong>
-                <span>+254 791 863 382</span>
+
+                <strong>
+                    Phone
+                </strong>
+
+                <span>
+                    +254 791 863 382
+                </span>
+
             </div>
 
-            <div class="contact-detail">
-                <strong>Email</strong>
-                <span>info@wemacharityfoundation.org</span>
-            </div>
 
             <div class="contact-detail">
-                <strong>Address</strong>
-                <span>00100 - GPO Nairobi, Kenya</span>
+
+                <strong>
+                    Email
+                </strong>
+
+                <span>
+                    info@wemacharityfoundation.org
+                </span>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <strong>
+                    Address
+                </strong>
+
+                <span>
+                    00100 - GPO Nairobi, Kenya
+                </span>
+
             </div>
 
         </div>
@@ -2044,30 +2243,42 @@ footer{
             Get Involved
         </h3>
 
+
         <div class="field">
+
             <input
                 type="text"
                 placeholder="Your Name"
                 required>
+
         </div>
 
+
         <div class="field">
+
             <input
                 type="email"
                 placeholder="Email Address"
                 required>
+
         </div>
 
+
         <div class="field">
+
             <textarea
                 placeholder="Your Message"
                 required></textarea>
+
         </div>
+
 
         <button
             type="submit"
             class="btn btn-green">
+
             Send Message
+
         </button>
 
     </form>
@@ -2077,7 +2288,7 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -2107,13 +2318,25 @@ footer{
 
             <div class="footer-links">
 
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#programs">Programs</a>
-                <a href="#stories">Stories</a>
-                <a href="#contact">Get Involved</a>
+                <a href="#home">
+                    Home
+                </a>
 
-                <!-- PAYMENT PAGE -->
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#programs">
+                    Programs
+                </a>
+
+                <a href="#stories">
+                    Stories
+                </a>
+
+                <a href="#contact">
+                    Get Involved
+                </a>
 
                 <a href="./payment.html">
                     Donate
@@ -2152,7 +2375,10 @@ footer{
 
 
     <div class="copyright">
-        © 2026 Wema Charity Foundation. All Rights Reserved.
+
+        © 2026 Wema Charity Foundation.
+        All Rights Reserved.
+
     </div>
 
 </div>
@@ -2168,14 +2394,14 @@ footer{
 
 function toggleMenu(){
 
-    document
-        .getElementById("navLinks")
-        .classList.toggle("open");
+    const nav = document.getElementById("navLinks");
+
+    nav.classList.toggle("open");
 
 }
 
 
-/* Close mobile menu after clicking */
+/* Close menu after clicking */
 
 document
 .querySelectorAll(".nav-links a")
@@ -2184,8 +2410,8 @@ document
     link.addEventListener("click",function(){
 
         document
-            .getElementById("navLinks")
-            .classList.remove("open");
+        .getElementById("navLinks")
+        .classList.remove("open");
 
     });
 
@@ -2224,31 +2450,6 @@ function sendMessage(event){
     event.target.reset();
 
 }
-
-
-/* ============================
-   DONATION
-============================ */
-
-/*
-   IMPORTANT:
-
-   All donation buttons use:
-
-       ./payment.html
-
-   This means the browser stays on the
-   FRONTEND service.
-
-   Example:
-
-       https://your-frontend.onrender.com/
-                 ↓
-       https://your-frontend.onrender.com/payment.html
-
-   Your payment.html should then communicate
-   with your BACKEND service for Paylor/M-Pesa.
-*/
 
 </script>
 
