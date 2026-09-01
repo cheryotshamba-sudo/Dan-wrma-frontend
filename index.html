@@ -6,714 +6,511 @@
 
 <title>Wema Charity Foundation</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta
+    name="description"
+    content="Support Wema Charity Foundation through a secure donation."
+>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    font-family:Poppins,sans-serif;
-    color:#222;
-    background:#fff;
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+    line-height: 1.6;
 }
 
-img{
-    width:100%;
-    display:block;
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
 }
 
-a{
-    text-decoration:none;
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    min-height: 70px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.container{
-    width:92%;
-    max-width:1180px;
-    margin:auto;
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #087f3f;
+    text-decoration: none;
 }
 
-/* HEADER */
-
-header{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:100;
-    color:white;
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
 }
 
-.navbar{
-    height:85px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:white;
-    font-size:21px;
-    font-weight:800;
+.nav-donate {
+    background: #087f3f;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 7px;
 }
 
-.logo-icon{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:white;
-    color:#168354;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-}
+/* =====================================================
+   HERO
+===================================================== */
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:28px;
-    list-style:none;
-}
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
 
-.nav-links a{
-    color:white;
-    font-size:14px;
-    font-weight:500;
-}
-
-.donate-btn{
-    background:#f5ad2b;
-    padding:11px 22px;
-    border-radius:5px;
-}
-
-.menu{
-    display:none;
-    font-size:29px;
-    cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-    min-height:700px;
-    display:flex;
-    align-items:center;
     background:
-    linear-gradient(rgba(0,55,38,.68),rgba(0,55,38,.65)),
-    url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=90")
-    center/cover no-repeat;
-}
-
-.hero-content{
-    max-width:760px;
-    color:white;
-    padding-top:70px;
-}
-
-.small-title{
-    color:#f4bb43;
-    text-transform:uppercase;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:2px;
-    margin-bottom:14px;
-}
-
-.hero h1{
-    font-size:58px;
-    line-height:1.12;
-    font-weight:800;
-    margin-bottom:23px;
-}
-
-.hero h1 span{
-    color:#f5b83f;
-}
-
-.hero p{
-    max-width:680px;
-    font-size:16px;
-    line-height:1.8;
-    color:#eee;
-    margin-bottom:30px;
-}
-
-.buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 27px;
-    border-radius:5px;
-    font-weight:600;
-}
-
-.btn-gold{
-    background:#f5ad2b;
-    color:white;
-}
-
-.btn-outline{
-    border:1px solid white;
-    color:white;
-}
+        linear-gradient(
+            rgba(0, 0, 0, 0.48),
+            rgba(0, 0, 0, 0.48)
+        ),
+        url("images/hero.jpg");
 
-/* SECTIONS */
-
-section{
-    padding:85px 0;
-}
-
-.heading{
-    text-align:center;
-    max-width:720px;
-    margin:0 auto 48px;
-}
-
-.heading span{
-    color:#198754;
-    text-transform:uppercase;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:1.5px;
-}
-
-.heading h2{
-    font-size:38px;
-    line-height:1.25;
-    margin:12px 0;
-}
-
-.heading p{
-    color:#777;
+    background-size: cover;
+    background-position: center;
 }
 
-/* FOCUS */
-
-.focus{
-    background:#fafafa;
-}
-
-.focus-grid{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:18px;
-}
-
-.focus-card{
-    background:white;
-    padding:25px 10px;
-    text-align:center;
-    border-radius:8px;
-    box-shadow:0 5px 25px rgba(0,0,0,.06);
+.hero-content {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    padding: 70px 20px;
+    color: white;
 }
-
-.icon{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:#e7f5ee;
-    color:#198754;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 14px;
-    font-size:22px;
-}
-
-.focus-card h3{
-    font-size:14px;
-}
-
-/* MISSION */
 
-.mission-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:24px;
+.hero-content h1 {
+    max-width: 700px;
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 25px;
 }
 
-.mission-card{
-    position:relative;
-    height:330px;
-    border-radius:10px;
-    overflow:hidden;
+.hero-content p {
+    max-width: 650px;
+    font-size: 19px;
+    margin-bottom: 32px;
 }
 
-.mission-card img{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+.donate-btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
 
-.mission-card:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent,rgba(0,0,0,.85));
-}
+    background: #f5b400;
+    color: #111;
 
-.mission-text{
-    position:absolute;
-    z-index:2;
-    bottom:0;
-    padding:28px;
-    color:white;
-}
+    padding: 15px 30px;
+    border-radius: 8px;
 
-.mission-text h3{
-    font-size:23px;
-    margin-bottom:7px;
-}
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
 
-.mission-text p{
-    color:#eee;
-    font-size:14px;
+    transition: 0.2s;
 }
 
-/* DONATION */
-
-.donation{
-    background:#126b4a;
-    color:white;
+.donate-btn:hover {
+    transform: translateY(-2px);
 }
 
-.donation-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:60px;
-}
+/* =====================================================
+   SECTIONS
+===================================================== */
 
-.donation h2{
-    font-size:42px;
-    line-height:1.25;
-    margin:12px 0 18px;
+.section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 20px;
 }
 
-.donation p{
-    color:#dbece4;
-    margin-bottom:25px;
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
 }
 
-.donation-img{
-    border-radius:12px;
-    overflow:hidden;
+.section-title h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-.donation-img img{
-    height:420px;
-    object-fit:cover;
+.section-title p {
+    color: #666;
 }
 
-/* PROGRAMS */
+/* =====================================================
+   ABOUT CARDS
+===================================================== */
 
-.program-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
 }
 
-.program-card{
-    border-radius:10px;
-    overflow:hidden;
-    background:white;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
+.card {
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
 }
 
-.program-card img{
-    height:220px;
-    object-fit:cover;
+.card h3 {
+    margin-bottom: 12px;
+    color: #087f3f;
 }
 
-.program-body{
-    padding:24px;
-}
-
-.program-body h3{
-    font-size:19px;
-    margin-bottom:9px;
-}
+/* =====================================================
+   IMAGE SECTION
+===================================================== */
 
-.program-body p{
-    font-size:14px;
-    color:#777;
-    line-height:1.7;
+.image-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 20px;
 }
 
-.read{
-    display:inline-block;
-    margin-top:14px;
-    color:#198754;
-    font-size:14px;
-    font-weight:700;
+.image-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* CAUSES */
+/* =====================================================
+   DONATION MODAL
+===================================================== */
 
-.causes{
-    background:#f7f8f7;
-}
+.modal {
+    position: fixed;
+    inset: 0;
 
-.causes-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-}
+    background: rgba(0, 0, 0, 0.65);
 
-.cause{
-    background:white;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
+    display: none;
+    align-items: center;
+    justify-content: center;
 
-.cause img{
-    height:200px;
-    object-fit:cover;
-}
+    padding: 20px;
 
-.cause-content{
-    padding:20px;
+    z-index: 9999;
 }
 
-.cause h3{
-    font-size:17px;
-    margin-bottom:8px;
+.modal.active {
+    display: flex;
 }
 
-.cause p{
-    color:#777;
-    font-size:13px;
-}
+.payment-box {
+    width: 100%;
+    max-width: 450px;
 
-/* TESTIMONIALS */
+    background: white;
 
-.testimonials{
-    background:#126b4a;
-    color:white;
-}
+    border-radius: 16px;
 
-.testimonials .heading span{
-    color:#f4ba42;
-}
+    padding: 30px;
 
-.testimonials .heading p{
-    color:#d7e8e0;
-}
+    position: relative;
 
-.slider{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-.testimonial{
-    display:none;
-}
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
 
-.testimonial.active{
-    display:block;
-}
+    border: none;
+    background: none;
 
-.testimonial p{
-    font-size:19px;
-    font-style:italic;
-    line-height:1.8;
-    margin-bottom:20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #555;
 }
 
-.testimonial h4{
-    color:#f4ba42;
+.payment-box h2 {
+    color: #087f3f;
+    margin-bottom: 8px;
 }
 
-/* STORIES */
-
-.story-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.payment-intro {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 22px;
 }
 
-.story{
-    border:1px solid #eee;
-    border-radius:9px;
-    overflow:hidden;
-}
+/* =====================================================
+   FORM
+===================================================== */
 
-.story img{
-    height:210px;
-    object-fit:cover;
+.form-group {
+    margin-bottom: 17px;
 }
 
-.story-body{
-    padding:23px;
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
 }
 
-.date{
-    color:#198754;
-    font-size:12px;
-    font-weight:700;
-}
+.form-group input {
+    width: 100%;
 
-.story h3{
-    font-size:18px;
-    margin:8px 0;
-}
+    padding: 14px;
 
-.story p{
-    color:#777;
-    font-size:13px;
-}
+    border: 1px solid #d6d6d6;
 
-/* NEWSLETTER */
+    border-radius: 8px;
 
-.newsletter{
-    background:#f4f8f6;
-    text-align:center;
-}
+    font-size: 16px;
 
-.newsletter-form{
-    max-width:600px;
-    margin:25px auto 0;
-    display:flex;
+    outline: none;
 }
 
-.newsletter-form input{
-    flex:1;
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:5px 0 0 5px;
-    outline:none;
-    font-family:inherit;
+.form-group input:focus {
+    border-color: #087f3f;
 }
 
-.newsletter-form button{
-    border:0;
-    background:#198754;
-    color:white;
-    padding:0 25px;
-    border-radius:0 5px 5px 0;
-    cursor:pointer;
-    font-weight:600;
+.amount-input {
+    font-size: 22px !important;
+    font-weight: 700;
 }
-
-/* CONTACT */
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-}
+/* =====================================================
+   PAYMENT BUTTON
+===================================================== */
 
-.contact-info h2{
-    font-size:38px;
-    line-height:1.3;
-    margin:12px 0 15px;
-}
+.pay-btn {
+    width: 100%;
 
-.contact-info p{
-    color:#777;
-    margin-bottom:25px;
-}
+    border: none;
+    border-radius: 8px;
 
-.contact-item{
-    margin-bottom:18px;
-}
+    background: #087f3f;
+    color: white;
 
-.contact-item strong{
-    display:block;
-    color:#198754;
-}
+    padding: 15px;
 
-.contact-form{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-}
+    font-size: 17px;
+    font-weight: 800;
 
-.contact-form input,
-.contact-form textarea{
-    padding:14px;
-    border:1px solid #ddd;
-    border-radius:5px;
-    outline:none;
-    font-family:inherit;
-}
+    cursor: pointer;
 
-.contact-form textarea{
-    height:150px;
-    resize:none;
+    margin-top: 5px;
 }
 
-.contact-form button{
-    width:max-content;
-    border:0;
-    cursor:pointer;
+.pay-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
-
-/* FOOTER */
 
-footer{
-    background:#082f23;
-    color:white;
-    padding:60px 0 25px;
-}
+/* =====================================================
+   LOADING
+===================================================== */
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
-    margin-bottom:40px;
+.loading {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
 }
 
-.footer-brand p{
-    color:#b7cbc3;
-    font-size:13px;
-    margin-top:14px;
+.loading.active {
+    display: block;
 }
 
-footer h3{
-    font-size:16px;
-    margin-bottom:15px;
-}
+.spinner {
+    width: 42px;
+    height: 42px;
 
-footer ul{
-    list-style:none;
-}
+    border: 4px solid #ddd;
+    border-top-color: #087f3f;
 
-footer li{
-    color:#b7cbc3;
-    font-size:13px;
-    margin-bottom:8px;
-}
+    border-radius: 50%;
 
-footer a{
-    color:#b7cbc3;
-}
+    animation: spin 0.8s linear infinite;
 
-.footer-bottom{
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.1);
-    text-align:center;
-    color:#9db3aa;
-    font-size:12px;
+    margin: 0 auto 15px;
 }
 
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .nav-links{
-        position:absolute;
-        display:none;
-        top:80px;
-        left:0;
-        width:100%;
-        background:#126b4a;
-        flex-direction:column;
-        padding:25px;
-    }
-
-    .nav-links.show{
-        display:flex;
-    }
-
-    .menu{
-        display:block;
-    }
-
-    .focus-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .program-grid,
-    .story-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .causes-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
-@media(max-width:600px){
+/* =====================================================
+   MESSAGE
+===================================================== */
 
-    section{
-        padding:65px 0;
+.message {
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    display: none;
+
+    font-size: 14px;
+}
+
+.message.show {
+    display: block;
+}
+
+.message.error {
+    background: #ffecec;
+    color: #a40000;
+}
+
+.message.info {
+    background: #edf7f1;
+    color: #075c2e;
+}
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.success-screen {
+    display: none;
+    text-align: center;
+}
+
+.success-screen.active {
+    display: block;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #087f3f;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+}
+
+.success-screen h2 {
+    color: #087f3f;
+    margin-bottom: 10px;
+}
+
+.success-screen p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.transaction {
+    background: #f4f4f4;
+    padding: 12px;
+    border-radius: 7px;
+
+    margin: 18px 0;
+
+    font-size: 13px;
+
+    word-break: break-all;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #087f3f;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .nav-links a:not(.nav-donate) {
+        display: none;
     }
 
-    .hero{
-        min-height:650px;
+    .navbar {
+        min-height: 62px;
     }
 
-    .hero h1{
-        font-size:35px;
+    .hero {
+        min-height: 580px;
     }
 
-    .hero p{
-        font-size:14px;
+    .hero-content {
+        padding: 50px 20px;
     }
 
-    .heading h2{
-        font-size:29px;
+    .hero-content h1 {
+        font-size: 44px;
     }
 
-    .focus-grid{
-        grid-template-columns:1fr 1fr;
+    .hero-content p {
+        font-size: 17px;
     }
 
-    .mission-grid,
-    .donation-grid,
-    .program-grid,
-    .story-grid,
-    .contact-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
+    .cards {
+        grid-template-columns: 1fr;
     }
 
-    .causes-grid{
-        grid-template-columns:1fr 1fr;
+    .image-grid {
+        grid-template-columns: 1fr;
     }
 
-    .donation-img img{
-        height:300px;
+    .section {
+        padding: 60px 20px;
     }
 
-    .newsletter-form{
-        flex-direction:column;
-        gap:10px;
+    .payment-box {
+        padding: 25px 20px;
     }
-
-    .newsletter-form input,
-    .newsletter-form button{
-        height:50px;
-        border-radius:5px;
-    }
-
 }
 
 </style>
@@ -721,757 +518,979 @@ footer a{
 
 <body>
 
+<!-- ===================================================
+     HEADER
+=================================================== -->
+
 <header>
 
-<div class="container navbar">
+    <nav class="navbar">
 
-<a href="#home" class="logo">
-    <span class="logo-icon">W</span>
-    WEMA
-</a>
+        <a href="#" class="logo">
+            WEMA
+        </a>
 
-<ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#programs">Programs</a></li>
-    <li><a href="#stories">Stories</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#donate" class="donate-btn">Donate</a></li>
-</ul>
+        <div class="nav-links">
 
-<div class="menu" id="menu">☰</div>
+            <a href="#about">
+                About
+            </a>
 
-</div>
+            <a href="#impact">
+                Our Impact
+            </a>
+
+            <a
+                href="#"
+                class="nav-donate"
+                onclick="openPayment(event)"
+            >
+                Donate Now
+            </a>
+
+        </div>
+
+    </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ===================================================
+     HERO
+=================================================== -->
 
-<section class="hero" id="home">
+<section class="hero">
 
-<div class="container">
+    <div class="hero-content">
 
-<div class="hero-content">
+        <h1>
+            Together, We Can Make A Difference.
+        </h1>
 
-<div class="small-title">
-Wema Charity Foundation
-</div>
+        <p>
+            Your contribution can help support meaningful
+            community initiatives and create opportunities
+            for people who need them most.
+        </p>
 
-<h1>
-Empowering Hope,
-<span>Shaping Futures</span>,
-Transforming Lives
-</h1>
+        <button
+            class="donate-btn"
+            onclick="openPayment()"
+        >
+            Donate Now
+        </button>
 
-<p>
-Through giving, compassion and community action,
-we work together to transform lives and nurture hope
-across Kenya.
-</p>
-
-<div class="buttons">
-<a href="#donate" class="btn btn-gold">Make a Donation</a>
-<a href="#about" class="btn btn-outline">Learn More</a>
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- FOCUS -->
+<!-- ===================================================
+     ABOUT
+=================================================== -->
 
-<section class="focus">
+<section
+    class="section"
+    id="about"
+>
 
-<div class="container">
+    <div class="section-title">
 
-<div class="heading">
-<span>Our Focus</span>
-<h2>Dedicated to impactful change and community welfare</h2>
-<p>
-Our commitment is guided by compassion,
-community welfare and sustainable development.
-</p>
-</div>
+        <h2>
+            About Wema
+        </h2>
 
-<div class="focus-grid">
+        <p>
+            Working together to support communities
+            and create positive change.
+        </p>
 
-<div class="focus-card">
-<div class="icon">❤</div>
-<h3>No Poverty</h3>
-</div>
+    </div>
 
-<div class="focus-card">
-<div class="icon">🎓</div>
-<h3>Quality Education</h3>
-</div>
+    <div class="cards">
 
-<div class="focus-card">
-<div class="icon">💧</div>
-<h3>Clean Water</h3>
-</div>
+        <div class="card">
 
-<div class="focus-card">
-<div class="icon">⚕</div>
-<h3>Good Healthcare</h3>
-</div>
+            <h3>
+                Community
+            </h3>
 
-<div class="focus-card">
-<div class="icon">🤝</div>
-<h3>Partnerships</h3>
-</div>
+            <p>
+                Supporting initiatives that strengthen
+                communities and improve people's lives.
+            </p>
 
-<div class="focus-card">
-<div class="icon">🍚</div>
-<h3>Zero Hunger</h3>
-</div>
+        </div>
 
-</div>
+        <div class="card">
 
-</div>
+            <h3>
+                Opportunity
+            </h3>
 
-</section>
+            <p>
+                Helping create opportunities that can
+                contribute to a better future.
+            </p>
 
+        </div>
 
-<!-- ABOUT -->
+        <div class="card">
 
-<section id="about">
+            <h3>
+                Impact
+            </h3>
 
-<div class="container">
+            <p>
+                Every contribution can play a role in
+                creating meaningful change.
+            </p>
 
-<div class="heading">
-<span>What We Do</span>
-<h2>Guided by Compassion, Committed to Change</h2>
-<p>
-We support individuals and families through education,
-healthcare, environmental initiatives and community development.
-</p>
-</div>
+        </div>
 
-<div class="mission-grid">
-
-<div class="mission-card">
-
-<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=90">
-
-<div class="mission-text">
-<h3>Compassionate Action</h3>
-<p>
-Our mission is to alleviate suffering
-and restore dignity to vulnerable communities.
-</p>
-</div>
-
-</div>
-
-<div class="mission-card">
-
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=90">
-
-<div class="mission-text">
-<h3>Education & Development</h3>
-<p>
-We invest in education, skills and opportunities
-that help communities build sustainable futures.
-</p>
-</div>
-
-</div>
-
-<div class="mission-card">
-
-<img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1000&q=90">
-
-<div class="mission-text">
-<h3>Healthcare</h3>
-<p>
-Supporting access to healthcare and wellness
-services for underserved communities.
-</p>
-</div>
-
-</div>
-
-<div class="mission-card">
-
-<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=90">
-
-<div class="mission-text">
-<h3>Community Partnerships</h3>
-<p>
-Working with organizations, businesses and
-individuals to maximize community impact.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- DONATE -->
+<!-- ===================================================
+     IMPACT / PICTURES
+=================================================== -->
 
-<section class="donation" id="donate">
+<section
+    class="section"
+    id="impact"
+>
 
-<div class="container donation-grid">
+    <div class="section-title">
 
-<div>
+        <h2>
+            Our Work
+        </h2>
 
-<div class="small-title">Support Our Mission</div>
+        <p>
+            See some of the work and community activities
+            supported by the foundation.
+        </p>
 
-<h2>Change a life today</h2>
+    </div>
 
-<p>
-Your contribution helps us continue vital work
-in education, healthcare, food relief, clean water
-and community development.
-</p>
+    <div class="image-grid">
 
-<a href="#" class="btn btn-gold">Donate Now</a>
+        <!-- Replace these with the actual pictures
+             you have permission to use -->
 
-</div>
+        <img
+            src="images/work1.jpg"
+            alt="Community activity"
+        >
 
-<div class="donation-img">
+        <img
+            src="images/work2.jpg"
+            alt="Community support"
+        >
 
-<img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=90">
+        <img
+            src="images/work3.jpg"
+            alt="Community initiative"
+        >
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PROGRAMS -->
-
-<section id="programs">
-
-<div class="container">
-
-<div class="heading">
-<span>Our Programs</span>
-<h2>Empowering communities through sustainable programs</h2>
-<p>
-Explore programs promoting education,
-healthcare access and community development.
-</p>
-</div>
-
-<div class="program-grid">
-
-<div class="program-card">
-
-<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=90">
-
-<div class="program-body">
-<h3>Education Initiatives</h3>
-<p>
-Empowering future generations through
-quality education and skills development.
-</p>
-<a class="read" href="#">Read More →</a>
-</div>
-
-</div>
-
-<div class="program-card">
-
-<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=90">
-
-<div class="program-body">
-<h3>Healthcare Services</h3>
-<p>
-Enhancing health outcomes through
-accessible healthcare and wellness programs.
-</p>
-<a class="read" href="#">Read More →</a>
-</div>
-
-</div>
-
-<div class="program-card">
-
-<img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=90">
-
-<div class="program-body">
-<h3>Community Development</h3>
-<p>
-Building inclusive and resilient communities
-through social programs and infrastructure.
-</p>
-<a class="read" href="#">Read More →</a>
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- CAUSES -->
-
-<section class="causes">
-
-<div class="container">
-
-<div class="heading">
-<span>Causes</span>
-<h2>Every contribution directly supports our causes</h2>
-</div>
-
-<div class="causes-grid">
-
-<div class="cause">
-
-<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=90">
-
-<div class="cause-content">
-<h3>Education Scholarships</h3>
-<p>
-Help children access education and build brighter futures.
-</p>
-</div>
-
-</div>
-
-<div class="cause">
-
-<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=90">
-
-<div class="cause-content">
-<h3>Healthcare Support</h3>
-<p>
-Support healthcare access for underserved families.
-</p>
-</div>
-
-</div>
-
-<div class="cause">
-
-<img src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?auto=format&fit=crop&w=800&q=90">
-
-<div class="cause-content">
-<h3>Food Relief</h3>
-<p>
-Help provide nutritious food to families facing hunger.
-</p>
-</div>
-
-</div>
-
-<div class="cause">
-
-<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=90">
-
-<div class="cause-content">
-<h3>Community Development</h3>
-<p>
-Help communities create sustainable living conditions.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonials">
-
-<div class="container">
-
-<div class="heading">
-
-<span>Testimonials</span>
-
-<h2>Inspiring stories from supporters</h2>
-
-<p>
-Discover heartfelt messages from people
-who believe in the mission.
-</p>
-
-</div>
-
-<div class="slider">
-
-<div class="testimonial active">
-
-<p>
-"I am always touched to see the great work
-you are really doing to the less fortunate."
-</p>
-
-<h4>Kepha Changali</h4>
-
-</div>
-
-<div class="testimonial">
-
-<p>
-"May God remember the work that you do
-to reach out to all these people."
-</p>
-
-<h4>John Tela</h4>
-
-</div>
-
-<div class="testimonial">
-
-<p>
-"You have really shown your true nature;
-few people can do what you have done."
-</p>
-
-<h4>Brian Wafula</h4>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STORIES -->
-
-<section id="stories">
-
-<div class="container">
-
-<div class="heading">
-
-<span>Real Stories</span>
-
-<h2>Real Stories, Lasting Impact</h2>
-
-<p>
-Hear from individuals whose lives have been
-transformed through support.
-</p>
-
-</div>
-
-<div class="story-grid">
-
-<div class="story">
-
-<img src="https://images.unsplash.com/photo-1504150558240-0b4fd8946624?auto=format&fit=crop&w=900&q=90">
-
-<div class="story-body">
-
-<div class="date">APRIL 7, 2026</div>
-
-<h3>From Homeless to a Homeowner</h3>
-
-<p>
-An incredible transformation through housing
-and community support.
-</p>
-
-</div>
-
-</div>
-
-<div class="story">
-
-<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=90">
-
-<div class="story-body">
-
-<div class="date">MARCH 11, 2026</div>
-
-<h3>A New Foundation of Hope</h3>
-
-<p>
-A life transformed through community support.
-</p>
-
-</div>
-
-</div>
-
-<div class="story">
-
-<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=90">
-
-<div class="story-body">
-
-<div class="date">FEBRUARY 23, 2026</div>
-
-<h3>A Dream Restored</h3>
-
-<p>
-A journey towards education and a brighter future.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- NEWSLETTER -->
-
-<section class="newsletter">
-
-<div class="container">
-
-<div class="heading">
-
-<span>Stay Connected</span>
-
-<h2>Stay informed, stay inspired</h2>
-
-<p>
-Subscribe to receive updates about our work,
-programs and success stories.
-</p>
-
-</div>
-
-<form class="newsletter-form" id="newsletter">
-
-<input type="email"
-placeholder="Enter your email address"
-required>
-
-<button type="submit">Subscribe</button>
-
-</form>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<div class="contact-grid">
-
-<div class="contact-info">
-
-<div class="small-title">Contact Us</div>
-
-<h2>
-Let's join hands and drive lasting change
-</h2>
-
-<p>
-Reach out to learn more about our programs,
-share your ideas or support our mission.
-</p>
-
-<div class="contact-item">
-<strong>Phone</strong>
-+254 791 863 382
-</div>
-
-<div class="contact-item">
-<strong>Email</strong>
-info@wemacharityfoundation.org
-</div>
-
-<div class="contact-item">
-<strong>Address</strong>
-00100 - GPO Nairobi, Kenya
-</div>
-
-</div>
-
-<form class="contact-form" id="contactForm">
-
-<input type="text"
-placeholder="Your Name"
-required>
-
-<input type="email"
-placeholder="Email Address"
-required>
-
-<textarea
-placeholder="Your Message"
-required></textarea>
-
-<button class="btn btn-gold" type="submit">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
+<!-- ===================================================
+     FOOTER
+=================================================== -->
 
 <footer>
 
-<div class="container">
+    <p>
+        <strong>
+            Wema Charity Foundation
+        </strong>
+    </p>
 
-<div class="footer-grid">
+    <p>
+        Supporting communities. Creating opportunities.
+    </p>
 
-<div class="footer-brand">
-
-<div class="logo">
-<span class="logo-icon">W</span>
-WEMA
-</div>
-
-<p>
-Empowering hope, shaping futures and
-transforming lives through giving.
-</p>
-
-</div>
-
-<div>
-<h3>Explore</h3>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#programs">Programs</a></li>
-<li><a href="#stories">Stories</a></li>
-</ul>
-</div>
-
-<div>
-<h3>Get Involved</h3>
-<ul>
-<li>Donate</li>
-<li>Volunteer</li>
-<li>Partner With Us</li>
-<li>Support Our Causes</li>
-</ul>
-</div>
-
-<div>
-<h3>Contact</h3>
-<ul>
-<li>+254 791 863 382</li>
-<li>info@wemacharityfoundation.org</li>
-<li>Nairobi, Kenya</li>
-</ul>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-© 2026 Wema Charity Foundation. All Rights Reserved.
-</div>
-
-</div>
+    <p>
+        © 2026 Wema Charity Foundation
+    </p>
 
 </footer>
 
 
+<!-- ===================================================
+     PAYMENT MODAL
+=================================================== -->
+
+<div
+    class="modal"
+    id="paymentModal"
+>
+
+    <div class="payment-box">
+
+        <button
+            class="close-btn"
+            onclick="closePayment()"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <!-- PAYMENT FORM -->
+
+        <div id="paymentForm">
+
+            <h2>
+                Make a Donation
+            </h2>
+
+            <p class="payment-intro">
+                Enter the amount you would like to
+                contribute. You choose the amount.
+            </p>
+
+
+            <div class="form-group">
+
+                <label for="donorName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="donorName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="amount">
+                    Donation Amount (KSh)
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    class="amount-input"
+                    placeholder="Enter amount"
+                    min="1"
+                    step="1"
+                    inputmode="numeric"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    M-Pesa Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="07XXXXXXXX"
+                    autocomplete="tel"
+                    inputmode="tel"
+                >
+
+            </div>
+
+
+            <button
+                class="pay-btn"
+                id="payButton"
+                onclick="makeDonation()"
+            >
+                Donate Now
+            </button>
+
+
+            <div
+                class="message"
+                id="paymentMessage"
+            ></div>
+
+
+            <div
+                class="loading"
+                id="loading"
+            >
+
+                <div class="spinner"></div>
+
+                <strong>
+                    Sending payment request...
+                </strong>
+
+                <p>
+                    Please wait.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUCCESS SCREEN -->
+
+        <div
+            class="success-screen"
+            id="successScreen"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Donation Successful
+            </h2>
+
+            <p>
+                Thank you for your contribution.
+            </p>
+
+            <p id="successAmount"></p>
+
+            <div
+                class="transaction"
+                id="transactionDetails"
+            ></div>
+
+            <button
+                class="pay-btn"
+                onclick="closePayment()"
+            >
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 <script>
 
-/* MOBILE MENU */
+// ======================================================
+// CONFIGURATION
+// ======================================================
 
-const menu =
-document.getElementById("menu");
+const BACKEND_URL =
+    "https://dan-wema-backend.onrender.com";
 
-const nav =
-document.getElementById("navLinks");
-
-menu.onclick = () => {
-    nav.classList.toggle("show");
-};
+let statusTimer = null;
 
 
-/* CLOSE MENU AFTER CLICK */
+// ======================================================
+// OPEN PAYMENT
+// ======================================================
 
-document.querySelectorAll(".nav-links a")
-.forEach(link => {
+function openPayment(event) {
 
-    link.onclick = () => {
-        nav.classList.remove("show");
-    };
-
-});
-
-
-/* TESTIMONIAL SLIDER */
-
-const testimonials =
-document.querySelectorAll(".testimonial");
-
-let current = 0;
-
-setInterval(() => {
-
-    testimonials[current].classList.remove("active");
-
-    current++;
-
-    if(current >= testimonials.length){
-        current = 0;
+    if (event) {
+        event.preventDefault();
     }
 
-    testimonials[current].classList.add("active");
+    document
+        .getElementById("paymentModal")
+        .classList.add("active");
 
-},5000);
+}
 
 
-/* NEWSLETTER */
+// ======================================================
+// CLOSE PAYMENT
+// ======================================================
+
+function closePayment() {
+
+    document
+        .getElementById("paymentModal")
+        .classList.remove("active");
+
+    stopPaymentPolling();
+
+}
+
+
+// ======================================================
+// SHOW MESSAGE
+// ======================================================
+
+function showMessage(
+    text,
+    type = "info"
+) {
+
+    const message =
+        document.getElementById(
+            "paymentMessage"
+        );
+
+    message.textContent = text;
+
+    message.className =
+        "message show " + type;
+
+}
+
+
+// ======================================================
+// HIDE MESSAGE
+// ======================================================
+
+function hideMessage() {
+
+    const message =
+        document.getElementById(
+            "paymentMessage"
+        );
+
+    message.className =
+        "message";
+
+    message.textContent = "";
+
+}
+
+
+// ======================================================
+// START LOADING
+// ======================================================
+
+function startLoading() {
+
+    document
+        .getElementById("loading")
+        .classList.add("active");
+
+    document
+        .getElementById("payButton")
+        .disabled = true;
+
+}
+
+
+// ======================================================
+// STOP LOADING
+// ======================================================
+
+function stopLoading() {
+
+    document
+        .getElementById("loading")
+        .classList.remove("active");
+
+    document
+        .getElementById("payButton")
+        .disabled = false;
+
+}
+
+
+// ======================================================
+// NORMALIZE PHONE
+// ======================================================
+
+function normalizePhone(phone) {
+
+    phone =
+        String(phone)
+            .replace(/\s+/g, "")
+            .replace(/-/g, "");
+
+    if (phone.startsWith("+254")) {
+        phone = phone.substring(1);
+    }
+
+    if (phone.startsWith("0")) {
+        phone =
+            "254" +
+            phone.substring(1);
+    }
+
+    return phone;
+}
+
+
+// ======================================================
+// MAKE DONATION
+// ======================================================
+
+async function makeDonation() {
+
+    hideMessage();
+
+    const name =
+        document
+            .getElementById("donorName")
+            .value
+            .trim();
+
+    const amount =
+        document
+            .getElementById("amount")
+            .value;
+
+    const phoneInput =
+        document
+            .getElementById("phone")
+            .value
+            .trim();
+
+
+    // --------------------------------------------------
+    // VALIDATE NAME
+    // --------------------------------------------------
+
+    if (!name) {
+
+        showMessage(
+            "Please enter your full name.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    // --------------------------------------------------
+    // VALIDATE AMOUNT
+    // --------------------------------------------------
+
+    const numericAmount =
+        Number(amount);
+
+    if (
+        !Number.isFinite(numericAmount) ||
+        numericAmount <= 0
+    ) {
+
+        showMessage(
+            "Please enter a valid donation amount.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    // --------------------------------------------------
+    // VALIDATE PHONE
+    // --------------------------------------------------
+
+    const phone =
+        normalizePhone(phoneInput);
+
+    if (!/^2547\d{8}$/.test(phone)) {
+
+        showMessage(
+            "Please enter a valid Kenyan M-Pesa number.",
+            "error"
+        );
+
+        return;
+    }
+
+
+    // --------------------------------------------------
+    // START
+    // --------------------------------------------------
+
+    startLoading();
+
+    showMessage(
+        "Connecting to the payment service...",
+        "info"
+    );
+
+
+    try {
+
+        const response =
+            await fetch(
+                `${BACKEND_URL}/stk-push`,
+                {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        name:
+                            name,
+
+                        phone:
+                            phone,
+
+                        amount:
+                            numericAmount
+
+                    })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "STK RESPONSE:",
+            data
+        );
+
+
+        // --------------------------------------------------
+        // REQUEST FAILED
+        // --------------------------------------------------
+
+        if (!response.ok || !data.success) {
+
+            stopLoading();
+
+            showMessage(
+                data.message ||
+                "Unable to start the payment.",
+                "error"
+            );
+
+            return;
+        }
+
+
+        // --------------------------------------------------
+        // SAVE TRANSACTION
+        // --------------------------------------------------
+
+        localStorage.setItem(
+            "wema_transaction_id",
+            data.transactionId
+        );
+
+        localStorage.setItem(
+            "wema_donation_amount",
+            numericAmount
+        );
+
+
+        // --------------------------------------------------
+        // STK SENT
+        // --------------------------------------------------
+
+        showMessage(
+            "Payment request sent. Please check your M-Pesa phone and enter your PIN to complete the donation.",
+            "info"
+        );
+
+
+        // --------------------------------------------------
+        // CHECK PAYMENT
+        // --------------------------------------------------
+
+        stopLoading();
+
+        startPaymentPolling(
+            data.transactionId,
+            numericAmount
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Donation error:",
+            error
+        );
+
+        stopLoading();
+
+        showMessage(
+            "Unable to connect to the payment server. Please try again.",
+            "error"
+        );
+
+    }
+
+}
+
+
+// ======================================================
+// PAYMENT STATUS POLLING
+// ======================================================
+
+function startPaymentPolling(
+    transactionId,
+    amount
+) {
+
+    stopPaymentPolling();
+
+    let attempts = 0;
+
+    const maxAttempts = 40;
+
+    statusTimer =
+        setInterval(
+            async () => {
+
+                attempts++;
+
+                const completed =
+                    await checkPaymentStatus(
+                        transactionId,
+                        amount
+                    );
+
+                if (
+                    completed ||
+                    attempts >= maxAttempts
+                ) {
+
+                    stopPaymentPolling();
+
+                    if (
+                        attempts >= maxAttempts &&
+                        !completed
+                    ) {
+
+                        showMessage(
+                            "We could not confirm the payment yet. If you completed the M-Pesa payment, please wait a moment and try again.",
+                            "info"
+                        );
+
+                    }
+
+                }
+
+            },
+            5000
+        );
+
+}
+
+
+// ======================================================
+// CHECK PAYMENT STATUS
+// ======================================================
+
+async function checkPaymentStatus(
+    transactionId,
+    amount
+) {
+
+    try {
+
+        const response =
+            await fetch(
+                `${BACKEND_URL}/payment-status`,
+                {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        transactionId:
+                            transactionId
+
+                    })
+
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "PAYMENT STATUS:",
+            data
+        );
+
+
+        if (!data.success) {
+            return false;
+        }
+
+
+        const status =
+            String(
+                data.status || ""
+            ).toLowerCase();
+
+
+        // --------------------------------------------------
+        // SUCCESS
+        // --------------------------------------------------
+
+        if (
+            status === "completed" ||
+            status === "success" ||
+            status === "successful"
+        ) {
+
+            showSuccess(
+                amount,
+                transactionId
+            );
+
+            return true;
+        }
+
+
+        // --------------------------------------------------
+        // FAILED
+        // --------------------------------------------------
+
+        if (
+            status === "failed" ||
+            status === "cancelled" ||
+            status === "canceled"
+        ) {
+
+            showMessage(
+                "The payment was not completed.",
+                "error"
+            );
+
+            return true;
+        }
+
+
+        return false;
+
+
+    } catch (error) {
+
+        console.error(
+            "Status check error:",
+            error
+        );
+
+        return false;
+    }
+
+}
+
+
+// ======================================================
+// SHOW SUCCESS
+// ======================================================
+
+function showSuccess(
+    amount,
+    transactionId
+) {
+
+    stopPaymentPolling();
+
+    document
+        .getElementById("paymentForm")
+        .style.display = "none";
+
+    document
+        .getElementById("successScreen")
+        .classList.add("active");
+
+
+    document
+        .getElementById("successAmount")
+        .textContent =
+            `Donation amount: KSh ${Number(amount).toLocaleString()}`;
+
+
+    document
+        .getElementById("transactionDetails")
+        .textContent =
+            `Transaction ID: ${transactionId}`;
+
+}
+
+
+// ======================================================
+// STOP POLLING
+// ======================================================
+
+function stopPaymentPolling() {
+
+    if (statusTimer) {
+
+        clearInterval(
+            statusTimer
+        );
+
+        statusTimer = null;
+    }
+
+}
+
+
+// ======================================================
+// CLOSE MODAL WHEN CLICKING OUTSIDE
+// ======================================================
 
 document
-.getElementById("newsletter")
-.addEventListener("submit",function(e){
+    .getElementById("paymentModal")
+    .addEventListener(
+        "click",
+        function(event) {
 
-    e.preventDefault();
+            if (
+                event.target === this
+            ) {
 
-    alert("Thank you for subscribing!");
+                closePayment();
 
-    this.reset();
+            }
 
-});
+        }
+    );
 
 
-/* CONTACT */
+// ======================================================
+// ESCAPE KEY
+// ======================================================
 
-document
-.getElementById("contactForm")
-.addEventListener("submit",function(e){
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-    e.preventDefault();
+        if (
+            event.key === "Escape"
+        ) {
 
-    alert("Thank you for contacting us!");
+            closePayment();
 
-    this.reset();
+        }
 
-});
+    }
+);
 
 </script>
 
