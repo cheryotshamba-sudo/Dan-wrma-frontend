@@ -6,1514 +6,1361 @@
 
 <title>Wema Charity Foundation</title>
 
-<meta name="description" content="Wema Charity Foundation - Empowering Hope, Shaping Futures, Transforming Lives.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    color: #222;
-    background: #fff;
-    line-height: 1.6;
+body{
+    font-family:"DM Sans",sans-serif;
+    color:#26352f;
+    background:#fff;
+    line-height:1.65;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
 }
 
 button,
 input,
-textarea {
-    font-family: inherit;
+textarea{
+    font:inherit;
 }
 
-.container {
-    width: 92%;
-    max-width: 1150px;
-    margin: auto;
+:root{
+    --green:#176b4d;
+    --dark-green:#0b4936;
+    --light-green:#edf6f1;
+    --cream:#f8f5ed;
+    --gold:#d8b65c;
+    --dark:#1d2d26;
+    --text:#65736d;
+    --border:#e4ebe7;
 }
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+    background:var(--dark-green);
+    color:white;
+    font-size:13px;
+}
+
+.topbar-inner{
+    min-height:38px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:25px;
+}
+
 
 /* ================= HEADER ================= */
 
-header {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid #eee;
 }
 
-.navbar {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.nav{
+    height:82px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    color: #087f5b;
-    font-size: 22px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.logo-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #087f5b;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
+.logo-mark{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--green);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    font-weight:800;
 }
 
-.menu {
-    display: flex;
-    gap: 28px;
-    align-items: center;
+.logo-text strong{
+    display:block;
+    color:var(--dark-green);
+    font-size:21px;
+    line-height:1;
 }
 
-.menu a {
-    font-size: 14px;
-    font-weight: 500;
+.logo-text span{
+    display:block;
+    color:var(--green);
+    font-size:8px;
+    letter-spacing:2px;
+    margin-top:4px;
 }
 
-.menu a:hover {
-    color: #087f5b;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-.menu-btn {
-    display: none;
-    font-size: 27px;
-    cursor: pointer;
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
 }
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.nav-donate{
+    background:var(--green);
+    color:white!important;
+    padding:12px 20px;
+    border-radius:4px;
+}
+
+.nav-donate:hover{
+    background:var(--dark-green);
+}
+
+.mobile-menu{
+    display:none;
+    background:none;
+    border:0;
+    font-size:28px;
+    color:var(--dark-green);
+}
+
 
 /* ================= HERO ================= */
 
-.hero {
+.hero{
+    min-height:680px;
+    display:flex;
+    align-items:center;
     background:
-        linear-gradient(rgba(0,100,70,.82), rgba(0,70,50,.86)),
-        linear-gradient(135deg, #087f5b, #0ca678);
-    color: #fff;
-    padding: 90px 0;
+    linear-gradient(
+        90deg,
+        rgba(6,49,36,.94),
+        rgba(6,49,36,.70),
+        rgba(6,49,36,.22)
+    ),
+    url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
 }
 
-.hero-content {
-    max-width: 760px;
+.hero-content{
+    max-width:710px;
+    padding:100px 0;
+    color:white;
 }
 
-.hero h1 {
-    font-size: clamp(38px, 6vw, 65px);
-    line-height: 1.1;
-    margin-bottom: 20px;
-    font-weight: 800;
+.eyebrow{
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:700;
+    color:var(--gold);
+    margin-bottom:18px;
 }
 
-.hero h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    font-weight: 600;
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(44px,6vw,75px);
+    line-height:1.08;
+    font-weight:600;
+    margin-bottom:24px;
 }
 
-.hero p {
-    font-size: 16px;
-    opacity: .95;
-    max-width: 700px;
+.hero h1 span{
+    color:#e1c367;
 }
 
-.hero-buttons {
-    margin-top: 30px;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+.hero p{
+    max-width:600px;
+    color:rgba(255,255,255,.9);
+    font-size:17px;
 }
 
-.btn {
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    padding: 14px 23px;
-    font-size: 15px;
-    font-weight: 700;
-    transition: .2s;
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    margin-top:32px;
+    flex-wrap:wrap;
 }
 
-.btn-primary {
-    background: #fff;
-    color: #087f5b;
+.btn{
+    border:0;
+    border-radius:4px;
+    padding:14px 25px;
+    font-size:14px;
+    font-weight:700;
+    transition:.25s;
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.btn-outline {
-    background: transparent;
-    color: #fff;
-    border: 1px solid rgba(255,255,255,.8);
+.btn-green{
+    background:var(--green);
+    color:white;
 }
 
-/* ================= SECTIONS ================= */
-
-section {
-    padding: 70px 0;
+.btn-green:hover{
+    background:#10543c;
 }
 
-.section-title {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 40px;
+.btn-light{
+    background:white;
+    color:var(--dark-green);
 }
 
-.section-title h2 {
-    color: #087f5b;
-    font-size: 32px;
-    margin-bottom: 10px;
+
+/* ================= INTRO ================= */
+
+.intro{
+    padding:105px 0 80px;
 }
 
-.section-title p {
-    color: #666;
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:75px;
+    align-items:center;
 }
+
+.image-stack{
+    position:relative;
+    padding-right:50px;
+    padding-bottom:45px;
+}
+
+.image-main{
+    height:500px;
+    object-fit:cover;
+}
+
+.image-small{
+    position:absolute;
+    width:230px;
+    height:230px;
+    right:0;
+    bottom:0;
+    object-fit:cover;
+    border:12px solid white;
+}
+
+.section-heading h2,
+.intro-text h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(35px,4vw,52px);
+    line-height:1.18;
+    color:var(--dark-green);
+    margin-bottom:20px;
+}
+
+.section-heading p,
+.intro-text p{
+    color:var(--text);
+}
+
+.intro-text p{
+    margin-bottom:16px;
+}
+
+.small-link{
+    display:inline-block;
+    margin-top:10px;
+    color:var(--green);
+    font-weight:700;
+    border-bottom:1px solid var(--green);
+}
+
 
 /* ================= FOCUS ================= */
 
-.focus-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+.focus{
+    background:var(--cream);
+    padding:85px 0;
 }
 
-.focus-card {
-    background: #f6faf8;
-    border-radius: 12px;
-    padding: 25px 10px;
-    text-align: center;
-    border: 1px solid #e5f0eb;
+.section-heading.center{
+    text-align:center;
+    max-width:730px;
+    margin:0 auto 45px;
 }
 
-.focus-icon {
-    font-size: 30px;
-    margin-bottom: 8px;
+.section-heading .eyebrow{
+    color:var(--green);
 }
 
-.focus-card h3 {
-    font-size: 14px;
+.focus-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:13px;
 }
 
-/* ================= WHAT WE DO ================= */
-
-.do-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.focus-card{
+    background:white;
+    min-height:150px;
+    border:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px 8px;
+    transition:.25s;
 }
 
-.card {
-    background: #fff;
-    padding: 28px;
-    border-radius: 14px;
-    border: 1px solid #e9e9e9;
-    box-shadow: 0 8px 25px rgba(0,0,0,.04);
+.focus-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
 }
 
-.card h3 {
-    color: #087f5b;
-    margin-bottom: 10px;
-    font-size: 18px;
+.focus-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--light-green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:10px;
 }
 
-.card p {
-    color: #666;
-    font-size: 14px;
+.focus-card h3{
+    font-size:13px;
+    color:var(--dark-green);
 }
+
+
+/* ================= MISSION ================= */
+
+.mission{
+    padding:100px 0;
+}
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.mission-card{
+    height:430px;
+    position:relative;
+    overflow:hidden;
+    color:white;
+}
+
+.mission-card img{
+    position:absolute;
+    inset:0;
+    height:100%;
+    object-fit:cover;
+}
+
+.mission-card:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 20%,
+        rgba(5,44,33,.94)
+    );
+}
+
+.mission-content{
+    position:absolute;
+    z-index:2;
+    left:27px;
+    right:27px;
+    bottom:28px;
+}
+
+.mission-content h3{
+    font-family:"Playfair Display",serif;
+    font-size:27px;
+    line-height:1.2;
+    margin-bottom:8px;
+}
+
+.mission-content p{
+    font-size:13px;
+    color:rgba(255,255,255,.85);
+}
+
 
 /* ================= SUPPORT ================= */
 
-.support {
-    background: #eaf7f2;
+.support{
+    background:var(--dark-green);
+    color:white;
+    padding:90px 0;
 }
 
-.support-box {
-    background: #087f5b;
-    color: #fff;
-    border-radius: 20px;
-    padding: 50px 30px;
-    text-align: center;
+.support-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
 }
 
-.support-box h2 {
-    font-size: 34px;
-    margin-bottom: 10px;
+.support h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,5vw,58px);
+    line-height:1.1;
+    margin-bottom:18px;
 }
 
-.support-box p {
-    max-width: 650px;
-    margin: 0 auto 25px;
-    opacity: .95;
+.support p{
+    max-width:570px;
+    color:rgba(255,255,255,.78);
 }
+
+.support-image{
+    height:390px;
+    object-fit:cover;
+}
+
+.support-button{
+    margin-top:25px;
+    background:#dfbd63;
+    color:#153f30;
+}
+
+
+/* ================= TRUST ================= */
+
+.trust{
+    padding:105px 0;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.trust-image{
+    height:540px;
+    object-fit:cover;
+}
+
+.trust-list{
+    display:grid;
+    gap:25px;
+    margin-top:30px;
+}
+
+.trust-item{
+    display:flex;
+    gap:17px;
+}
+
+.trust-number{
+    flex:0 0 43px;
+    height:43px;
+    background:var(--light-green);
+    color:var(--green);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:800;
+}
+
+.trust-item h3{
+    color:var(--dark-green);
+    font-size:17px;
+}
+
+.trust-item p{
+    color:var(--text);
+    font-size:14px;
+}
+
 
 /* ================= PROGRAMS ================= */
 
-.program-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+.programs{
+    background:var(--cream);
+    padding:100px 0;
 }
 
-.program {
-    padding: 30px;
-    border: 1px solid #e7e7e7;
-    border-radius: 14px;
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:23px;
 }
 
-.program h3 {
-    color: #087f5b;
-    margin-bottom: 12px;
+.program-card{
+    background:white;
+    overflow:hidden;
 }
 
-.program p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 15px;
+.program-card img{
+    height:260px;
+    object-fit:cover;
 }
 
-.read-more {
-    color: #087f5b;
-    font-weight: 700;
-    font-size: 14px;
+.program-card-body{
+    padding:25px;
 }
+
+.program-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:24px;
+    color:var(--dark-green);
+    margin-bottom:10px;
+}
+
+.program-card p{
+    color:var(--text);
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.read-more{
+    color:var(--green);
+    font-weight:700;
+    font-size:13px;
+}
+
 
 /* ================= CAUSES ================= */
 
-.causes {
-    background: #f8faf9;
+.causes{
+    padding:105px 0;
 }
 
-.causes-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.causes-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.cause {
-    background: #fff;
-    border-radius: 14px;
-    padding: 25px;
-    border: 1px solid #e8e8e8;
+.cause-card{
+    border:1px solid var(--border);
+    background:white;
 }
 
-.cause h3 {
-    color: #087f5b;
-    margin-bottom: 10px;
-    font-size: 17px;
+.cause-card img{
+    height:230px;
+    object-fit:cover;
 }
 
-.cause p {
-    color: #666;
-    font-size: 14px;
+.cause-body{
+    padding:22px;
 }
 
-/* ================= TESTIMONIAL ================= */
-
-.testimonial {
-    max-width: 750px;
-    margin: auto;
-    text-align: center;
-    background: #f7faf8;
-    border-radius: 16px;
-    padding: 40px 25px;
+.cause-body h3{
+    font-family:"Playfair Display",serif;
+    color:var(--dark-green);
+    font-size:21px;
+    margin-bottom:7px;
 }
 
-.quote {
-    font-size: 20px;
-    font-style: italic;
-    color: #444;
+.cause-body p{
+    color:var(--text);
+    font-size:13px;
 }
 
-.person {
-    margin-top: 20px;
-    font-weight: 700;
-    color: #087f5b;
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+    background:var(--light-green);
+    padding:100px 0;
 }
 
-/* ================= STORIES ================= */
-
-.story-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.story {
-    border: 1px solid #e7e7e7;
-    padding: 25px;
-    border-radius: 14px;
+.testimonial-card{
+    background:white;
+    padding:33px;
+    min-height:255px;
 }
 
-.date {
-    color: #087f5b;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 10px;
+.quote{
+    font-family:Georgia,serif;
+    font-size:45px;
+    line-height:1;
+    color:#d4e7dd;
 }
 
-.story h3 {
-    margin-bottom: 8px;
+.testimonial-card p{
+    color:var(--text);
+    font-size:14px;
+    margin:10px 0 20px;
 }
 
-.story p {
-    color: #666;
-    font-size: 14px;
+.testimonial-card h4{
+    color:var(--dark-green);
 }
+
+.testimonial-card span{
+    color:#89958f;
+    font-size:12px;
+}
+
 
 /* ================= NEWSLETTER ================= */
 
-.newsletter {
-    background: #087f5b;
-    color: #fff;
+.newsletter{
+    background:var(--cream);
+    padding:80px 0;
 }
 
-.newsletter-box {
-    max-width: 650px;
-    margin: auto;
-    text-align: center;
+.newsletter-box{
+    max-width:780px;
+    text-align:center;
+    margin:auto;
 }
 
-.newsletter h2 {
-    margin-bottom: 8px;
+.newsletter-box h2{
+    font-family:"Playfair Display",serif;
+    color:var(--dark-green);
+    font-size:43px;
 }
 
-.newsletter p {
-    opacity: .9;
-    margin-bottom: 20px;
+.newsletter-box p{
+    color:var(--text);
+    margin:8px 0 25px;
 }
 
-.subscribe-form {
-    display: flex;
-    gap: 8px;
+.newsletter-form{
+    display:flex;
+    max-width:570px;
+    margin:auto;
 }
 
-.subscribe-form input {
-    flex: 1;
-    border: none;
-    border-radius: 8px;
-    padding: 14px;
-    outline: none;
+.newsletter-form input{
+    flex:1;
+    border:1px solid #d7dfdb;
+    padding:15px;
+    outline:none;
 }
 
-.subscribe-form button {
-    background: #fff;
-    color: #087f5b;
+.newsletter-form button{
+    border:0;
+    background:var(--green);
+    color:white;
+    padding:0 25px;
+    font-weight:700;
 }
+
+
+/* ================= STORIES ================= */
+
+.stories{
+    padding:105px 0;
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr .8fr;
+    gap:22px;
+}
+
+.story-card{
+    border:1px solid var(--border);
+}
+
+.story-card img{
+    height:280px;
+    object-fit:cover;
+}
+
+.story-body{
+    padding:24px;
+}
+
+.story-date{
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.story-body h3{
+    color:var(--dark-green);
+    font-family:"Playfair Display",serif;
+    font-size:24px;
+    line-height:1.25;
+    margin:8px 0 10px;
+}
+
+.story-body p{
+    color:var(--text);
+    font-size:13px;
+}
+
 
 /* ================= CONTACT ================= */
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 40px;
+.contact{
+    background:var(--dark-green);
+    color:white;
+    padding:100px 0;
 }
 
-.contact-info h3 {
-    color: #087f5b;
-    margin-bottom: 20px;
+.contact-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
 }
 
-.contact-item {
-    margin-bottom: 20px;
+.contact h2{
+    font-family:"Playfair Display",serif;
+    font-size:50px;
+    line-height:1.15;
+    margin-bottom:18px;
 }
 
-.contact-item strong {
-    display: block;
-    margin-bottom: 4px;
+.contact-intro{
+    color:rgba(255,255,255,.75);
+    margin-bottom:35px;
 }
 
-.contact-item span {
-    color: #666;
+.contact-details{
+    display:grid;
+    gap:20px;
 }
 
-.contact-form {
-    display: grid;
-    gap: 14px;
+.contact-detail strong{
+    display:block;
+    color:#e1c368;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
+.contact-form{
+    background:white;
+    padding:35px;
 }
 
-.contact-form textarea {
-    min-height: 130px;
-    resize: vertical;
+.contact-form h3{
+    color:var(--dark-green);
+    font-family:"Playfair Display",serif;
+    font-size:28px;
+    margin-bottom:20px;
 }
+
+.field{
+    margin-bottom:14px;
+}
+
+.field input,
+.field textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #dce2de;
+    outline:none;
+}
+
+.field textarea{
+    height:135px;
+    resize:vertical;
+}
+
+.contact-form button{
+    width:100%;
+}
+
 
 /* ================= FOOTER ================= */
 
-footer {
-    background: #12352c;
-    color: #fff;
-    padding: 50px 0 20px;
+footer{
+    background:#082d21;
+    color:white;
+    padding:55px 0 22px;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 35px;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:50px;
 }
 
-.footer-logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 10px;
+.footer-logo{
+    font-size:25px;
+    font-weight:800;
+    margin-bottom:12px;
 }
 
-footer p {
-    color: #cbd8d3;
-    font-size: 14px;
+.footer-grid p{
+    color:#b7c8c0;
+    font-size:13px;
 }
 
-footer h4 {
-    margin-bottom: 14px;
+.footer-grid h4{
+    color:#e1c368;
+    margin-bottom:15px;
 }
 
-.footer-links {
-    display: grid;
-    gap: 8px;
+.footer-links{
+    display:grid;
+    gap:8px;
 }
 
-.footer-links a {
-    color: #cbd8d3;
-    font-size: 14px;
+.footer-links a{
+    color:#b7c8c0;
+    font-size:13px;
 }
 
-.footer-links a:hover {
-    color: #fff;
+.footer-links a:hover{
+    color:white;
 }
 
-.copyright {
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,.12);
-    margin-top: 35px;
-    padding-top: 20px;
-    color: #cbd8d3;
-    font-size: 13px;
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:45px;
+    padding-top:20px;
+    text-align:center;
+    color:#9eb0a8;
+    font-size:12px;
 }
 
-/* ================= DONATION MODAL ================= */
-
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.68);
-    z-index: 3000;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal.show {
-    display: flex;
-}
-
-.modal-box {
-    width: 100%;
-    max-width: 450px;
-    max-height: 92vh;
-    overflow-y: auto;
-    background: #fff;
-    border-radius: 18px;
-    padding: 28px;
-    position: relative;
-    animation: popup .2s ease;
-}
-
-@keyframes popup {
-    from {
-        transform: scale(.94);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.close {
-    position: absolute;
-    right: 18px;
-    top: 12px;
-    border: none;
-    background: transparent;
-    font-size: 27px;
-    cursor: pointer;
-    color: #777;
-}
-
-.modal-box h2 {
-    color: #087f5b;
-    margin-bottom: 5px;
-}
-
-.modal-box .subtitle {
-    color: #777;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.amount-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.amount-btn {
-    border: 1px solid #cfe2da;
-    background: #f7fbf9;
-    color: #087f5b;
-    padding: 11px 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-.amount-btn.active {
-    background: #087f5b;
-    color: #fff;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #d8d8d8;
-    border-radius: 8px;
-    outline: none;
-}
-
-.form-group input:focus {
-    border-color: #087f5b;
-}
-
-.donate-submit {
-    width: 100%;
-    background: #087f5b;
-    color: #fff;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.donate-submit:disabled {
-    opacity: .65;
-    cursor: not-allowed;
-}
-
-/* ================= LOADING ================= */
-
-.loading-screen {
-    display: none;
-    text-align: center;
-    padding: 30px 10px;
-}
-
-.loading-screen.show {
-    display: block;
-}
-
-.spinner {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #dcece6;
-    border-top-color: #087f5b;
-    border-radius: 50%;
-    animation: spin .8s linear infinite;
-    margin: 0 auto 20px;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.loading-screen h3 {
-    color: #087f5b;
-    margin-bottom: 8px;
-}
-
-.loading-screen p {
-    color: #666;
-    font-size: 13px;
-}
-
-/* ================= SUCCESS ================= */
-
-.success-screen {
-    display: none;
-    text-align: center;
-    padding: 20px 5px;
-}
-
-.success-screen.show {
-    display: block;
-}
-
-.success-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 18px;
-    background: #e7f7f0;
-    color: #087f5b;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: 800;
-}
-
-.success-screen h2 {
-    color: #087f5b;
-    margin-bottom: 8px;
-}
-
-.success-screen p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.success-close {
-    background: #087f5b;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-/* ================= ERROR ================= */
-
-.error-message {
-    display: none;
-    background: #fff0f0;
-    color: #c62828;
-    border: 1px solid #ffd0d0;
-    padding: 10px;
-    border-radius: 7px;
-    margin-bottom: 12px;
-    font-size: 13px;
-}
-
-.error-message.show {
-    display: block;
-}
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 850px) {
+@media(max-width:1000px){
 
-    .menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        padding: 20px;
-        flex-direction: column;
-        border-bottom: 1px solid #eee;
+    .focus-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .menu.open {
-        display: flex;
+    .causes-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
-    .menu-btn {
-        display: block;
+    .story-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .focus-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .story-card:first-child{
+        grid-column:1/-1;
     }
 
-    .do-grid,
-    .program-grid,
-    .causes-grid,
-    .story-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
-@media (max-width: 560px) {
 
-    section {
-        padding: 55px 0;
+@media(max-width:780px){
+
+    .topbar{
+        display:none;
     }
 
-    .hero {
-        padding: 65px 0;
+    .nav{
+        height:70px;
     }
 
-    .hero h1 {
-        font-size: 40px;
+    .mobile-menu{
+        display:block;
     }
 
-    .hero h2 {
-        font-size: 18px;
+    .nav-links{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:70px;
+        background:white;
+        padding:15px 5%;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        border-bottom:1px solid #ddd;
     }
 
-    .hero-buttons {
-        display: grid;
-        grid-template-columns: 1fr;
+    .nav-links.open{
+        display:flex;
     }
 
-    .hero-buttons .btn {
-        width: 100%;
+    .nav-links a{
+        padding:13px 5px;
+        border-bottom:1px solid #eee;
     }
 
-    .focus-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-donate{
+        text-align:center;
+        margin-top:8px;
     }
 
-    .do-grid,
+    .intro-grid,
+    .support-grid,
+    .trust-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mission-grid,
     .program-grid,
-    .causes-grid,
-    .story-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .testimonial-grid{
+        grid-template-columns:1fr;
     }
 
-    .subscribe-form {
-        flex-direction: column;
+    .mission-card{
+        height:390px;
     }
 
-    .modal {
-        padding: 10px;
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .modal-box {
-        padding: 23px 18px;
-    }
-
-    .amount-options {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
+
+
+@media(max-width:520px){
+
+    .container{
+        width:90%;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .intro,
+    .trust,
+    .causes,
+    .stories{
+        padding:70px 0;
+    }
+
+    .focus{
+        padding:70px 0;
+    }
+
+    .focus-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .causes-grid{
+        grid-template-columns:1fr;
+    }
+
+    .story-grid{
+        grid-template-columns:1fr;
+    }
+
+    .story-card:first-child{
+        grid-column:auto;
+    }
+
+    .newsletter-form{
+        display:grid;
+        gap:8px;
+    }
+
+    .newsletter-form button{
+        height:50px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .image-stack{
+        padding-right:25px;
+        padding-bottom:30px;
+    }
+
+    .image-main{
+        height:400px;
+    }
+
+    .image-small{
+        width:150px;
+        height:150px;
+        border-width:7px;
+    }
+
+    .contact h2{
+        font-size:40px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="container navbar">
 
-        <a href="#" class="logo">
-            <span class="logo-circle">W</span>
-            WEMA
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <span>Kenya • Community • Compassion</span>
+        <a href="#contact">Get involved</a>
+    </div>
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+    <a href="#home" class="logo">
+
+        <div class="logo-mark">
+            W
+        </div>
+
+        <div class="logo-text">
+            <strong>WEMA</strong>
+            <span>CHARITY FOUNDATION</span>
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links" id="navLinks">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#causes">Causes</a>
+        <a href="#stories">Stories</a>
+        <a href="#contact">Contact</a>
+
+        <!-- IMPORTANT: GOES TO PAYMENT PAGE -->
+
+        <a href="./payment.html" class="nav-donate">
+            Donate
         </a>
 
-        <nav class="menu" id="menu">
-            <a href="#home">Home</a>
-            <a href="#focus">About</a>
-            <a href="#programs">Programs</a>
-            <a href="#stories">Stories</a>
-            <a href="#contact">Contact</a>
-            <a href="javascript:void(0)" onclick="openDonation()">Donate</a>
-        </nav>
+    </nav>
 
-        <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    </div>
+
+    <button
+        class="mobile-menu"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+</div>
+
 </header>
 
 
 <!-- HERO -->
+
 <section class="hero" id="home">
-    <div class="container">
 
-        <div class="hero-content">
+<div class="container">
 
-            <h1>Wema Charity Foundation</h1>
+<div class="hero-content">
 
-            <h2>
-                Empowering Hope, Shaping Futures, Transforming Lives
-            </h2>
+    <div class="eyebrow">
+        Through Giving
+    </div>
 
-            <p>
-                Through giving, compassion and community action, we work
-                together to transform lives and nurture hope across Kenya.
-            </p>
+    <h1>
+        Empowering Hope,
+        <span>Shaping Futures,</span>
+        Transforming Lives
+    </h1>
 
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="openDonation()">
-                    Make a Donation
-                </button>
+    <p>
+        Through giving, compassion and community action, we work
+        together to transform lives and nurture hope across Kenya.
+    </p>
 
-                <a href="#focus" class="btn btn-outline">
-                    Learn More
-                </a>
-            </div>
+    <div class="hero-buttons">
 
-        </div>
+        <!-- PAYMENT PAGE -->
+
+        <a
+            href="./payment.html"
+            class="btn btn-green">
+            Make a Donation
+        </a>
+
+        <a
+            href="#about"
+            class="btn btn-light">
+            Learn More
+        </a>
 
     </div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- OUR FOCUS -->
-<section id="focus">
-    <div class="container">
+<!-- ABOUT -->
 
-        <div class="section-title">
-            <h2>Our Focus</h2>
-            <p>
-                Dedicated to impactful change and community welfare
-            </p>
+<section class="intro" id="about">
+
+<div class="container intro-grid">
+
+    <div class="image-stack">
+
+        <img
+            class="image-main"
+            src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=1000&q=85"
+            alt="Community">
+
+        <img
+            class="image-small"
+            src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=600&q=85"
+            alt="Children">
+
+    </div>
+
+
+    <div class="intro-text">
+
+        <div class="eyebrow">
+            Our Commitment
         </div>
 
-        <p style="text-align:center;color:#666;max-width:750px;margin:-20px auto 35px;">
-            Our commitment is guided by compassion, community welfare and
-            sustainable development.
+        <h2>
+            Dedicated to impactful change
+            and community welfare
+        </h2>
+
+        <p>
+            Our commitment is guided by compassion, community welfare
+            and sustainable development.
         </p>
 
-        <div class="focus-grid">
+        <p>
+            We work to support vulnerable individuals and families
+            through meaningful community programs.
+        </p>
 
-            <div class="focus-card">
-                <div class="focus-icon">❤</div>
-                <h3>No Poverty</h3>
-            </div>
+        <a href="#programs" class="small-link">
+            Learn More →
+        </a>
 
-            <div class="focus-card">
-                <div class="focus-icon">🎓</div>
-                <h3>Quality Education</h3>
-            </div>
-
-            <div class="focus-card">
-                <div class="focus-icon">💧</div>
-                <h3>Clean Water</h3>
-            </div>
-
-            <div class="focus-card">
-                <div class="focus-icon">⚕</div>
-                <h3>Good Healthcare</h3>
-            </div>
-
-            <div class="focus-card">
-                <div class="focus-icon">🤝</div>
-                <h3>Partnerships</h3>
-            </div>
-
-            <div class="focus-card">
-                <div class="focus-icon">🍚</div>
-                <h3>Zero Hunger</h3>
-            </div>
-
-        </div>
     </div>
+
+</div>
+
+</section>
+
+
+<!-- FOCUS -->
+
+<section class="focus">
+
+<div class="container">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">
+            Our Focus
+        </div>
+
+        <h2>
+            Dedicated to impactful change
+        </h2>
+
+        <p>
+            Our commitment is guided by compassion, community welfare
+            and sustainable development.
+        </p>
+
+    </div>
+
+
+    <div class="focus-grid">
+
+        <div class="focus-card">
+            <div class="focus-icon">❤</div>
+            <h3>No Poverty</h3>
+        </div>
+
+        <div class="focus-card">
+            <div class="focus-icon">🎓</div>
+            <h3>Quality Education</h3>
+        </div>
+
+        <div class="focus-card">
+            <div class="focus-icon">💧</div>
+            <h3>Clean Water</h3>
+        </div>
+
+        <div class="focus-card">
+            <div class="focus-icon">⚕</div>
+            <h3>Good Healthcare</h3>
+        </div>
+
+        <div class="focus-card">
+            <div class="focus-icon">🤝</div>
+            <h3>Partnerships</h3>
+        </div>
+
+        <div class="focus-card">
+            <div class="focus-icon">🍚</div>
+            <h3>Zero Hunger</h3>
+        </div>
+
+    </div>
+
+</div>
+
 </section>
 
 
 <!-- WHAT WE DO -->
-<section style="background:#f8faf9;">
-    <div class="container">
 
-        <div class="section-title">
-            <h2>What We Do</h2>
-            <p>Guided by Compassion, Committed to Change</p>
+<section class="mission">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            What We Do
         </div>
 
-        <p style="text-align:center;color:#666;max-width:750px;margin:-20px auto 35px;">
-            We support individuals and families through education, healthcare,
-            environmental initiatives and community development.
+        <h2>
+            Guided by Compassion,
+            Committed to Change
+        </h2>
+
+        <p>
+            We support individuals and families through education,
+            healthcare, environmental initiatives and community
+            development.
         </p>
 
-        <div class="do-grid">
-
-            <div class="card">
-                <h3>Compassionate Action</h3>
-                <p>
-                    Our mission is to alleviate suffering and restore dignity
-                    to vulnerable communities.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Education & Development</h3>
-                <p>
-                    We invest in education, skills and opportunities that help
-                    communities build sustainable futures.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Healthcare</h3>
-                <p>
-                    Supporting access to healthcare and wellness services for
-                    underserved communities.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Community Partnerships</h3>
-                <p>
-                    Working with organizations, businesses and individuals to
-                    maximize community impact.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- SUPPORT -->
-<section class="support">
-    <div class="container">
-
-        <div class="support-box">
-
-            <h2>Support Our Mission</h2>
-
-            <p>
-                <strong>Change a life today</strong><br>
-                Your contribution helps us continue vital work in education,
-                healthcare, food relief, clean water and community development.
-            </p>
-
-            <button class="btn btn-primary" onclick="openDonation()">
-                Donate Now
-            </button>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- PROGRAMS -->
-<section id="programs">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Our Programs</h2>
-            <p>
-                Empowering communities through sustainable programs
-            </p>
-        </div>
-
-        <p style="text-align:center;color:#666;max-width:750px;margin:-20px auto 35px;">
-            Explore programs promoting education, healthcare access and
-            community development.
-        </p>
-
-        <div class="program-grid">
-
-            <div class="program">
-                <h3>Education Initiatives</h3>
-                <p>
-                    Empowering future generations through quality education
-                    and skills development.
-                </p>
-                <a href="#contact" class="read-more">Read More →</a>
-            </div>
-
-            <div class="program">
-                <h3>Healthcare Services</h3>
-                <p>
-                    Enhancing health outcomes through accessible healthcare
-                    and wellness programs.
-                </p>
-                <a href="#contact" class="read-more">Read More →</a>
-            </div>
-
-            <div class="program">
-                <h3>Community Development</h3>
-                <p>
-                    Building inclusive and resilient communities through
-                    social programs and infrastructure.
-                </p>
-                <a href="#contact" class="read-more">Read More →</a>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- CAUSES -->
-<section class="causes">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Causes</h2>
-            <p>Every contribution directly supports our causes</p>
-        </div>
-
-        <div class="causes-grid">
-
-            <div class="cause">
-                <h3>Education Scholarships</h3>
-                <p>
-                    Help children access education and build brighter futures.
-                </p>
-            </div>
-
-            <div class="cause">
-                <h3>Healthcare Support</h3>
-                <p>
-                    Support healthcare access for underserved families.
-                </p>
-            </div>
-
-            <div class="cause">
-                <h3>Food Relief</h3>
-                <p>
-                    Help provide nutritious food to families facing hunger.
-                </p>
-            </div>
-
-            <div class="cause">
-                <h3>Community Development</h3>
-                <p>
-                    Help communities create sustainable living conditions.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- TESTIMONIALS -->
-<section>
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Testimonials</h2>
-            <p>Inspiring stories from supporters</p>
-        </div>
-
-        <p style="text-align:center;color:#666;max-width:700px;margin:-20px auto 30px;">
-            Discover heartfelt messages from people who believe in the mission.
-        </p>
-
-        <div class="testimonial">
-
-            <div class="quote">
-                "I am always touched to see the great work you are really doing
-                to the less fortunate."
-            </div>
-
-            <div class="person">
-                Kepha Changali
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- STORIES -->
-<section id="stories" style="background:#f8faf9;">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Real Stories</h2>
-            <p>Real Stories, Lasting Impact</p>
-        </div>
-
-        <p style="text-align:center;color:#666;max-width:700px;margin:-20px auto 35px;">
-            Hear from individuals whose lives have been transformed through support.
-        </p>
-
-        <div class="story-grid">
-
-            <div class="story">
-                <div class="date">APRIL 7, 2026</div>
-                <h3>From Homeless to a Homeowner</h3>
-                <p>
-                    An incredible transformation through housing and community
-                    support.
-                </p>
-            </div>
-
-            <div class="story">
-                <div class="date">MARCH 11, 2026</div>
-                <h3>A New Foundation of Hope</h3>
-                <p>
-                    A life transformed through community support.
-                </p>
-            </div>
-
-            <div class="story">
-                <div class="date">FEBRUARY 23, 2026</div>
-                <h3>A Dream Restored</h3>
-                <p>
-                    A journey towards education and a brighter future.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-    <div class="container">
-
-        <div class="newsletter-box">
-
-            <h2>Stay Connected</h2>
-
-            <p>
-                Stay informed, stay inspired
-            </p>
-
-            <p>
-                Subscribe to receive updates about our work, programs and
-                success stories.
-            </p>
-
-            <form class="subscribe-form" onsubmit="subscribe(event)">
-                <input
-                    type="email"
-                    placeholder="Enter your email address"
-                    required
-                >
-
-                <button class="btn" type="submit">
-                    Subscribe
-                </button>
-            </form>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Contact Us</h2>
-            <p>Let's join hands and drive lasting change</p>
-        </div>
-
-        <div class="contact-grid">
-
-            <div class="contact-info">
-
-                <p style="color:#666;margin-bottom:25px;">
-                    Reach out to learn more about our programs, share your
-                    ideas or support our mission.
-                </p>
-
-                <div class="contact-item">
-                    <strong>Phone</strong>
-                    <span>+254 791 863 382</span>
-                </div>
-
-                <div class="contact-item">
-                    <strong>Email</strong>
-                    <span>info@wemacharityfoundation.org</span>
-                </div>
-
-                <div class="contact-item">
-                    <strong>Address</strong>
-                    <span>00100 - GPO Nairobi, Kenya</span>
-                </div>
-
-            </div>
-
-            <form class="contact-form" onsubmit="sendMessage(event)">
-
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                >
-
-                <input
-                    type="email"
-                    placeholder="Email Address"
-                    required
-                >
-
-                <textarea
-                    placeholder="Your Message"
-                    required
-                ></textarea>
-
-                <button class="btn donate-submit" type="submit">
-                    Send Message
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div>
-                <div class="footer-logo">W WEMA</div>
-
-                <p>
-                    Empowering hope, shaping futures and transforming lives
-                    through giving.
-                </p>
-            </div>
-
-            <div>
-                <h4>Explore</h4>
-
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#focus">About</a>
-                    <a href="#programs">Programs</a>
-                    <a href="#stories">Stories</a>
-                    <a href="#contact">Get Involved</a>
-                    <a href="javascript:void(0)" onclick="openDonation()">Donate</a>
-                </div>
-            </div>
-
-            <div>
-                <h4>Support</h4>
-
-                <div class="footer-links">
-                    <a href="#contact">Volunteer</a>
-                    <a href="#contact">Partner With Us</a>
-                    <a href="#contact">Support Our Causes</a>
-                    <a href="#contact">Contact</a>
-                </div>
-
-                <br>
-
-                <p>+254 791 863 382</p>
-                <p>info@wemacharityfoundation.org</p>
-                <p>Nairobi, Kenya</p>
-            </div>
-
-        </div>
-
-        <div class="copyright">
-            © 2026 Wema Charity Foundation. All Rights Reserved.
-        </div>
-
     </div>
 
-</footer>
 
+    <div class="mission-grid">
 
-<!-- ================= DONATION MODAL ================= -->
+        <div class="mission-card">
 
-<div class="modal" id="donationModal">
+            <img
+                src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=85"
+                alt="Compassionate Action">
 
-    <div class="modal-box">
+            <div class="mission-content">
 
-        <button class="close" onclick="closeDonation()">×</button>
+                <h3>
+                    Compassionate Action
+                </h3>
 
-        <!-- DONATION FORM -->
+                <p>
+                    Our mission is to alleviate suffering and restore
+                    dignity to vulnerable communities.
+                </p>
 
-        <div id="donationForm">
-
-            <h2>Make a Donation</h2>
-
-            <p class="subtitle">
-                Your support helps us transform lives across Kenya.
-            </p>
-
-            <div class="form-group">
-                <label>Select Amount</label>
-
-                <div class="amount-options">
-
-                    <button type="button"
-                            class="amount-btn"
-                            onclick="selectAmount(100,this)">
-                        KSh 100
-                    </button>
-
-                    <button type="button"
-                            class="amount-btn"
-                            onclick="selectAmount(250,this)">
-                        KSh 250
-                    </button>
-
-                    <button type="button"
-                            class="amount-btn"
-                            onclick="selectAmount(500,this)">
-                        KSh 500
-                    </button>
-
-                    <button type="button"
-                            class="amount-btn"
-                            onclick="selectAmount(1000,this)">
-                        KSh 1,000
-                    </button>
-
-                    <button type="button"
-                            class="amount-btn"
-                            onclick="selectAmount(2500,this)">
-                        KSh 2,500
-                    </button>
-
-                    <button type="button"
-                            class="amount-btn"
-                            onclick="selectAmount(5000,this)">
-                        KSh 5,000
-                    </button>
-
-                </div>
             </div>
-
-            <div class="form-group">
-                <label for="customAmount">
-                    Enter Amount (KSh)
-                </label>
-
-                <input
-                    type="number"
-                    id="customAmount"
-                    min="1"
-                    step="1"
-                    placeholder="Enter any amount"
-                    oninput="clearAmountButtons()"
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="donorPhone">
-                    M-Pesa Phone Number
-                </label>
-
-                <input
-                    type="tel"
-                    id="donorPhone"
-                    placeholder="07XXXXXXXX or 2547XXXXXXXX"
-                    inputmode="numeric"
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="donorName">
-                    Name (Optional)
-                </label>
-
-                <input
-                    type="text"
-                    id="donorName"
-                    placeholder="Your name"
-                >
-            </div>
-
-            <div class="error-message" id="paymentError"></div>
-
-            <button
-                class="donate-submit"
-                id="donateButton"
-                onclick="startPayment()">
-                Donate Now
-            </button>
 
         </div>
 
 
-        <!-- LOADING -->
+        <div class="mission-card">
 
-        <div class="loading-screen" id="loadingScreen">
+            <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85"
+                alt="Education">
 
-            <div class="spinner"></div>
+            <div class="mission-content">
 
-            <h3>Processing Your Donation</h3>
+                <h3>
+                    Education & Development
+                </h3>
 
-            <p>
-                Please check your phone for the M-Pesa payment prompt
-                and enter your M-Pesa PIN to complete your donation.
-            </p>
+                <p>
+                    We invest in education, skills and opportunities
+                    that help communities build sustainable futures.
+                </p>
+
+            </div>
 
         </div>
 
 
-        <!-- SUCCESS -->
+        <div class="mission-card">
 
-        <div class="success-screen" id="successScreen">
+            <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85"
+                alt="Healthcare">
 
-            <div class="success-icon">
-                ✓
+            <div class="mission-content">
+
+                <h3>
+                    Healthcare
+                </h3>
+
+                <p>
+                    Supporting access to healthcare and wellness
+                    services for underserved communities.
+                </p>
+
             </div>
-
-            <h2>Donation Successful</h2>
-
-            <p>
-                Thank you for supporting Wema Charity Foundation.
-                Your contribution will help us continue transforming lives.
-            </p>
-
-            <button class="success-close" onclick="closeDonation()">
-                Done
-            </button>
 
         </div>
 
@@ -1521,466 +1368,887 @@ footer h4 {
 
 </div>
 
+</section>
+
+
+<!-- DONATION CTA -->
+
+<section class="support">
+
+<div class="container support-grid">
+
+    <div>
+
+        <div class="eyebrow">
+            Support Our Mission
+        </div>
+
+        <h2>
+            Change a life today
+        </h2>
+
+        <p>
+            Your contribution helps us continue vital work in
+            education, healthcare, food relief, clean water and
+            community development.
+        </p>
+
+        <!-- PAYMENT PAGE -->
+
+        <a
+            href="./payment.html"
+            class="btn support-button">
+            Donate Now
+        </a>
+
+    </div>
+
+
+    <img
+        class="support-image"
+        src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1000&q=85"
+        alt="Support our mission">
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="container trust-grid">
+
+    <img
+        class="trust-image"
+        src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1000&q=85"
+        alt="Community volunteers">
+
+
+    <div>
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Our Commitment
+            </div>
+
+            <h2>
+                Reasons to trust our
+                commitment and impact
+            </h2>
+
+            <p>
+                We believe sustainable change begins with communities.
+            </p>
+
+        </div>
+
+
+        <div class="trust-list">
+
+            <div class="trust-item">
+
+                <div class="trust-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Community Engagement
+                    </h3>
+
+                    <p>
+                        Working with communities to create meaningful
+                        grassroots impact.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <div class="trust-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Innovative Solutions
+                    </h3>
+
+                    <p>
+                        Supporting practical solutions to community
+                        challenges.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <div class="trust-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        Dedicated Team
+                    </h3>
+
+                    <p>
+                        Passionate people committed to making a
+                        difference.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="programs" id="programs">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            Our Programs
+        </div>
+
+        <h2>
+            Empowering communities
+            through sustainable programs
+        </h2>
+
+        <p>
+            Explore programs promoting education, healthcare access
+            and community development.
+        </p>
+
+    </div>
+
+
+    <div class="program-grid">
+
+        <article class="program-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=85"
+                alt="Education">
+
+            <div class="program-card-body">
+
+                <h3>
+                    Education Initiatives
+                </h3>
+
+                <p>
+                    Empowering future generations through quality
+                    education and skills development.
+                </p>
+
+                <a href="#contact" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="program-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85"
+                alt="Healthcare">
+
+            <div class="program-card-body">
+
+                <h3>
+                    Healthcare Services
+                </h3>
+
+                <p>
+                    Enhancing health outcomes through accessible
+                    healthcare and wellness programs.
+                </p>
+
+                <a href="#contact" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="program-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
+                alt="Community">
+
+            <div class="program-card-body">
+
+                <h3>
+                    Community Development
+                </h3>
+
+                <p>
+                    Building inclusive and resilient communities
+                    through social programs.
+                </p>
+
+                <a href="#contact" class="read-more">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CAUSES -->
+
+<section class="causes" id="causes">
+
+<div class="container">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">
+            Causes
+        </div>
+
+        <h2>
+            Every contribution directly
+            supports our causes
+        </h2>
+
+        <p>
+            Your support helps communities build stronger and more
+            sustainable futures.
+        </p>
+
+    </div>
+
+
+    <div class="causes-grid">
+
+        <article class="cause-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=85"
+                alt="Education Scholarships">
+
+            <div class="cause-body">
+
+                <h3>
+                    Education Scholarships
+                </h3>
+
+                <p>
+                    Help children access education and build brighter
+                    futures.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="cause-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=85"
+                alt="Healthcare Support">
+
+            <div class="cause-body">
+
+                <h3>
+                    Healthcare Support
+                </h3>
+
+                <p>
+                    Support healthcare access for underserved families.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="cause-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=800&q=85"
+                alt="Food Relief">
+
+            <div class="cause-body">
+
+                <h3>
+                    Food Relief
+                </h3>
+
+                <p>
+                    Help provide nutritious food to families facing
+                    hunger.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="cause-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=800&q=85"
+                alt="Community Development">
+
+            <div class="cause-body">
+
+                <h3>
+                    Community Development
+                </h3>
+
+                <p>
+                    Help communities create sustainable living
+                    conditions.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+<div class="container">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">
+            Testimonials
+        </div>
+
+        <h2>
+            Inspiring stories from supporters
+        </h2>
+
+        <p>
+            Discover heartfelt messages from people who believe in
+            the mission.
+        </p>
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+        <article class="testimonial-card">
+
+            <div class="quote">“</div>
+
+            <p>
+                I am always touched to see the great work you are
+                really doing to the less fortunate.
+            </p>
+
+            <h4>
+                Kepha Changali
+            </h4>
+
+            <span>
+                Supporter
+            </span>
+
+        </article>
+
+
+        <article class="testimonial-card">
+
+            <div class="quote">“</div>
+
+            <p>
+                May God remember the work that you do to reach out
+                to all these people.
+            </p>
+
+            <h4>
+                John Tela
+            </h4>
+
+            <span>
+                Supporter
+            </span>
+
+        </article>
+
+
+        <article class="testimonial-card">
+
+            <div class="quote">“</div>
+
+            <p>
+                You have really shown your true nature. Continue with
+                the same spirit.
+            </p>
+
+            <h4>
+                Brian Wafula
+            </h4>
+
+            <span>
+                Supporter
+            </span>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<div class="container newsletter-box">
+
+    <div class="eyebrow">
+        Stay Connected
+    </div>
+
+    <h2>
+        Stay informed, stay inspired
+    </h2>
+
+    <p>
+        Subscribe to receive updates about our work, programs and
+        success stories.
+    </p>
+
+    <form
+        class="newsletter-form"
+        onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required>
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</div>
+
+</section>
+
+
+<!-- STORIES -->
+
+<section class="stories" id="stories">
+
+<div class="container">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">
+            Real Stories
+        </div>
+
+        <h2>
+            Real Stories, Lasting Impact
+        </h2>
+
+        <p>
+            Hear from individuals whose lives have been transformed
+            through support.
+        </p>
+
+    </div>
+
+
+    <div class="story-grid">
+
+        <article class="story-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=1000&q=85"
+                alt="Housing">
+
+            <div class="story-body">
+
+                <div class="story-date">
+                    April 7, 2026
+                </div>
+
+                <h3>
+                    From Homeless to a Homeowner
+                </h3>
+
+                <p>
+                    An incredible transformation through housing and
+                    community support.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="story-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1494386346843-e12284507169?auto=format&fit=crop&w=900&q=85"
+                alt="Hope">
+
+            <div class="story-body">
+
+                <div class="story-date">
+                    March 11, 2026
+                </div>
+
+                <h3>
+                    A New Foundation of Hope
+                </h3>
+
+                <p>
+                    A life transformed through community support.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="story-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85"
+                alt="Education">
+
+            <div class="story-body">
+
+                <div class="story-date">
+                    February 23, 2026
+                </div>
+
+                <h3>
+                    A Dream Restored
+                </h3>
+
+                <p>
+                    A journey towards education and a brighter future.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+    <div>
+
+        <div class="eyebrow">
+            Contact Us
+        </div>
+
+        <h2>
+            Let's join hands and drive lasting change
+        </h2>
+
+        <p class="contact-intro">
+            Reach out to learn more about our programs, share your
+            ideas or support our mission.
+        </p>
+
+
+        <div class="contact-details">
+
+            <div class="contact-detail">
+                <strong>Phone</strong>
+                <span>+254 791 863 382</span>
+            </div>
+
+            <div class="contact-detail">
+                <strong>Email</strong>
+                <span>info@wemacharityfoundation.org</span>
+            </div>
+
+            <div class="contact-detail">
+                <strong>Address</strong>
+                <span>00100 - GPO Nairobi, Kenya</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <form
+        class="contact-form"
+        onsubmit="sendMessage(event)">
+
+        <h3>
+            Get Involved
+        </h3>
+
+        <div class="field">
+            <input
+                type="text"
+                placeholder="Your Name"
+                required>
+        </div>
+
+        <div class="field">
+            <input
+                type="email"
+                placeholder="Email Address"
+                required>
+        </div>
+
+        <div class="field">
+            <textarea
+                placeholder="Your Message"
+                required></textarea>
+        </div>
+
+        <button
+            type="submit"
+            class="btn btn-green">
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                WEMA
+            </div>
+
+            <p>
+                Empowering hope, shaping futures and transforming
+                lives through giving.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Explore
+            </h4>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#stories">Stories</a>
+                <a href="#contact">Get Involved</a>
+
+                <!-- PAYMENT PAGE -->
+
+                <a href="./payment.html">
+                    Donate
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+            <div class="footer-links">
+
+                <a href="tel:+254791863382">
+                    +254 791 863 382
+                </a>
+
+                <a href="mailto:info@wemacharityfoundation.org">
+                    info@wemacharityfoundation.org
+                </a>
+
+                <a href="#contact">
+                    Nairobi, Kenya
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Wema Charity Foundation. All Rights Reserved.
+    </div>
+
+</div>
+
+</footer>
+
 
 <script>
 
-/* ================= MENU ================= */
+/* ============================
+   MOBILE MENU
+============================ */
 
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("open");
+function toggleMenu(){
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("open");
+
 }
 
 
-/* ================= DONATION ================= */
+/* Close mobile menu after clicking */
 
-let selectedAmount = 0;
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
 
-function openDonation() {
+    link.addEventListener("click",function(){
 
-    const modal = document.getElementById("donationModal");
-
-    modal.classList.add("show");
-
-    document.getElementById("donationForm").style.display = "block";
-    document.getElementById("loadingScreen").classList.remove("show");
-    document.getElementById("successScreen").classList.remove("show");
-
-    document.getElementById("paymentError").classList.remove("show");
-
-    document.body.style.overflow = "hidden";
-}
-
-
-function closeDonation() {
-
-    document.getElementById("donationModal").classList.remove("show");
-
-    document.body.style.overflow = "auto";
-
-    resetDonation();
-}
-
-
-function resetDonation() {
-
-    selectedAmount = 0;
-
-    document.getElementById("customAmount").value = "";
-    document.getElementById("donorPhone").value = "";
-    document.getElementById("donorName").value = "";
-
-    document.querySelectorAll(".amount-btn").forEach(btn => {
-        btn.classList.remove("active");
-    });
-
-    document.getElementById("donationForm").style.display = "block";
-    document.getElementById("loadingScreen").classList.remove("show");
-    document.getElementById("successScreen").classList.remove("show");
-
-    document.getElementById("donateButton").disabled = false;
-    document.getElementById("donateButton").textContent = "Donate Now";
-}
-
-
-/* ================= AMOUNT ================= */
-
-function selectAmount(amount, button) {
-
-    selectedAmount = amount;
-
-    document.getElementById("customAmount").value = amount;
-
-    document.querySelectorAll(".amount-btn").forEach(btn => {
-        btn.classList.remove("active");
-    });
-
-    button.classList.add("active");
-}
-
-
-function clearAmountButtons() {
-
-    selectedAmount = 0;
-
-    document.querySelectorAll(".amount-btn").forEach(btn => {
-        btn.classList.remove("active");
-    });
-}
-
-
-/* ================= PHONE ================= */
-
-function formatPhone(phone) {
-
-    phone = phone.trim().replace(/\s+/g, "");
-
-    if (phone.startsWith("+254")) {
-        phone = phone.substring(1);
-    }
-
-    if (phone.startsWith("07")) {
-        phone = "254" + phone.substring(1);
-    }
-
-    if (phone.startsWith("01")) {
-        phone = "254" + phone.substring(1);
-    }
-
-    return phone;
-}
-
-
-function validPhone(phone) {
-
-    return /^254(7|1)\d{8}$/.test(phone);
-}
-
-
-/* ================= PAYMENT ================= */
-
-async function startPayment() {
-
-    const amountInput =
-        document.getElementById("customAmount").value;
-
-    const phoneInput =
-        document.getElementById("donorPhone").value;
-
-    const donorName =
-        document.getElementById("donorName").value.trim();
-
-    const error =
-        document.getElementById("paymentError");
-
-    error.classList.remove("show");
-    error.textContent = "";
-
-    const amount = Number(amountInput);
-
-    if (!amount || amount < 1) {
-
-        error.textContent =
-            "Please enter a valid donation amount.";
-
-        error.classList.add("show");
-
-        return;
-    }
-
-    const phone = formatPhone(phoneInput);
-
-    if (!validPhone(phone)) {
-
-        error.textContent =
-            "Please enter a valid Kenyan M-Pesa number, for example 0712345678.";
-
-        error.classList.add("show");
-
-        return;
-    }
-
-    const button =
-        document.getElementById("donateButton");
-
-    button.disabled = true;
-    button.textContent = "Starting Payment...";
-
-    document.getElementById("donationForm").style.display = "none";
-    document.getElementById("loadingScreen").classList.add("show");
-
-    try {
-
-        const response = await fetch("/api/paylor-payment", {
-
-            method: "POST",
-
-            headers: {
-                "Content-Type": "application/json"
-            },
-
-            body: JSON.stringify({
-                amount: amount,
-                phone: phone,
-                name: donorName,
-                purpose: "Wema Charity Foundation Donation"
-            })
-
-        });
-
-
-        let data = {};
-
-        try {
-            data = await response.json();
-        } catch (e) {
-            data = {};
-        }
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                data.message ||
-                data.error ||
-                "Unable to start the payment."
-            );
-
-        }
-
-
-        /*
-         * The backend may return different success
-         * indicators depending on the Paylor response.
-         */
-
-        if (
-            data.success === true ||
-            data.status === "PENDING" ||
-            data.status === "pending" ||
-            data.paymentStatus === "PENDING" ||
-            data.transactionId ||
-            data.transaction
-        ) {
-
-            waitForPayment(data);
-
-        } else {
-
-            throw new Error(
-                data.message ||
-                data.error ||
-                "Payment could not be initiated."
-            );
-
-        }
-
-    } catch (err) {
-
-        console.error("Donation payment error:", err);
-
-        document.getElementById("loadingScreen")
-            .classList.remove("show");
-
-        document.getElementById("donationForm")
-            .style.display = "block";
-
-        button.disabled = false;
-        button.textContent = "Donate Now";
-
-        error.textContent =
-            err.message ||
-            "Something went wrong. Please try again.";
-
-        error.classList.add("show");
-    }
-}
-
-
-/* ================= PAYMENT STATUS ================= */
-
-async function waitForPayment(paymentData) {
-
-    /*
-     * The backend can return a transaction ID.
-     * If available, we periodically ask the backend
-     * for the payment status.
-     */
-
-    const transactionId =
-        paymentData.transactionId ||
-        paymentData.transaction_id ||
-        paymentData.transaction?.id ||
-        paymentData.id;
-
-
-    if (!transactionId) {
-
-        /*
-         * If your server confirms the payment through
-         * its webhook and doesn't return an ID, leave
-         * the customer on the waiting screen.
-         *
-         * The fallback below gives enough time for
-         * the webhook to process.
-         */
-
-        setTimeout(() => {
-
-            showSuccess();
-
-        }, 15000);
-
-        return;
-    }
-
-
-    let attempts = 0;
-
-    const maxAttempts = 60;
-
-
-    const checkStatus = async () => {
-
-        attempts++;
-
-        try {
-
-            const response = await fetch(
-                "/api/paylor-payment-status/" +
-                encodeURIComponent(transactionId)
-            );
-
-            if (response.ok) {
-
-                const data = await response.json();
-
-                const status =
-                    String(
-                        data.status ||
-                        data.paymentStatus ||
-                        data.transaction?.status ||
-                        ""
-                    ).toLowerCase();
-
-
-                if (
-                    status === "success" ||
-                    status === "successful" ||
-                    status === "completed" ||
-                    status === "paid"
-                ) {
-
-                    showSuccess();
-                    return;
-                }
-
-
-                if (
-                    status === "failed" ||
-                    status === "cancelled" ||
-                    status === "canceled" ||
-                    status === "rejected"
-                ) {
-
-                    showPaymentFailure(
-                        "The payment was not completed. Please try again."
-                    );
-
-                    return;
-                }
-
-            }
-
-        } catch (e) {
-
-            console.log("Payment status check:", e);
-
-        }
-
-
-        if (attempts < maxAttempts) {
-
-            setTimeout(checkStatus, 3000);
-
-        } else {
-
-            /*
-             * Do not falsely claim success after timeout.
-             * Ask the donor to check their M-Pesa transaction.
-             */
-
-            showPaymentFailure(
-                "We could not confirm the payment yet. If you completed the M-Pesa payment, please wait a moment and check your M-Pesa message before trying again."
-            );
-        }
-    };
-
-
-    checkStatus();
-}
-
-
-/* ================= SUCCESS ================= */
-
-function showSuccess() {
-
-    document.getElementById("loadingScreen")
-        .classList.remove("show");
-
-    document.getElementById("donationForm")
-        .style.display = "none";
-
-    document.getElementById("successScreen")
-        .classList.add("show");
-}
-
-
-/* ================= PAYMENT FAILURE ================= */
-
-function showPaymentFailure(message) {
-
-    document.getElementById("loadingScreen")
-        .classList.remove("show");
-
-    document.getElementById("donationForm")
-        .style.display = "block";
-
-    const error =
-        document.getElementById("paymentError");
-
-    error.textContent = message;
-    error.classList.add("show");
-
-    document.getElementById("donateButton").disabled = false;
-    document.getElementById("donateButton").textContent = "Donate Now";
-}
-
-
-/* ================= NEWSLETTER ================= */
-
-function subscribe(event) {
-
-    event.preventDefault();
-
-    alert("Thank you for subscribing to Wema Charity Foundation.");
-
-    event.target.reset();
-}
-
-
-/* ================= CONTACT ================= */
-
-function sendMessage(event) {
-
-    event.preventDefault();
-
-    alert("Thank you for contacting Wema Charity Foundation. We will get back to you.");
-
-    event.target.reset();
-}
-
-
-/* ================= MODAL OUTSIDE CLICK ================= */
-
-document.getElementById("donationModal")
-    .addEventListener("click", function(event) {
-
-        if (event.target === this) {
-            closeDonation();
-        }
+        document
+            .getElementById("navLinks")
+            .classList.remove("open");
 
     });
-
-
-/* ================= ESC KEY ================= */
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-        closeDonation();
-    }
 
 });
+
+
+/* ============================
+   NEWSLETTER
+============================ */
+
+function subscribe(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for subscribing to Wema Charity Foundation."
+    );
+
+    event.target.reset();
+
+}
+
+
+/* ============================
+   CONTACT
+============================ */
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for contacting Wema Charity Foundation. We will get back to you."
+    );
+
+    event.target.reset();
+
+}
+
+
+/* ============================
+   DONATION
+============================ */
+
+/*
+   IMPORTANT:
+
+   All donation buttons use:
+
+       ./payment.html
+
+   This means the browser stays on the
+   FRONTEND service.
+
+   Example:
+
+       https://your-frontend.onrender.com/
+                 ↓
+       https://your-frontend.onrender.com/payment.html
+
+   Your payment.html should then communicate
+   with your BACKEND service for Paylor/M-Pesa.
+*/
 
 </script>
 
